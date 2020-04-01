@@ -6,9 +6,10 @@ module.exports = {
     mode:'development',
     entry:'./src/index.js',
     output:{
-        path:__dirname + '/dist',
-        filename: 'bundle.[hash].js'
+        filename: 'bundle.js',
+        path:__dirname + '/build'
     },
+    mode: 'none',
     resolve:{
         extensions: [".jsx" , ".js"]
     },
@@ -20,18 +21,20 @@ module.exports = {
                 use:['babel-loader']
             },
             {
-                test: /\.css$/,
+                test: /\.scss$/,
+                use: [
+                        'style-loader',
+                        'css-loader',
+                        'sass-loader'
+                ],
+                exclude: /node_modules/
+            },
+            {
+                test:/\.html$/,
                 use: [
                     {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                        modules: true,
-                        camelCase: true,
-                        sourceMap: true
-                        }
+                        loader: 'html-loader',
+                        options: {minimize: true}
                     }
                 ]
             }
