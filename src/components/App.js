@@ -4,7 +4,8 @@ import Home from './Home';
 import DynamicPage from './DynamicPage';
 import NoMatch from './NoMatch';
 import Header from './layout/Header/Header';
-import test from './test';
+// import study from './study/hooksUseInput';
+import study from './study/hooksUseTabs';
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
           <BrowserRouter>
             <Switch>
               {/* <Route exact path="/" component={Home} /> */}
-              <Route exact path="/" component={test} />
+              <Route exact path="/" component={study} />
               <Route exact path="/dynamic" component={DynamicPage} />
               <Route component={NoMatch} />
             </Switch>
