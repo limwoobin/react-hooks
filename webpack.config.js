@@ -22,12 +22,17 @@ module.exports = {
             },
             {
                 test: /\.(css|scss)$/,
+                exclude: /node_modules/,
                 use: [
                         'style-loader',
                         'css-loader',
                         'sass-loader'
-                ],
-                exclude: /node_modules/
+                ]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                exclude: /node_modules/,
+                use: ['file-loader']
             },
             {
                 test:/\.html$/,
@@ -44,7 +49,7 @@ module.exports = {
     plugins:[
         new HtmlWebpackPlugin({
             template: 'public/index.html',
-            // favicon: 'public/favicon.ico'
+            favicon: 'public/favicon.png'
         })
     ],
     devServer: {

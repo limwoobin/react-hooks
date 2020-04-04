@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.3",
     "node-sass": "^4.13.1",
@@ -28,9 +29,17 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.0.5",
+    "antd": "^4.1.0",
+    "axios": "^0.19.2",
+    "formik": "^2.1.4",
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2"
+    "react-icons": "^3.9.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.5"
   }
 }
