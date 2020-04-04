@@ -3,7 +3,7 @@ import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
 import Icon from '@ant-design/icons';
-import './Sections/Header.css';
+import './Sections/Header.scss';
 const Logo = require('../../images/logo.png');
 
 function Header() {
@@ -19,6 +19,9 @@ function Header() {
 
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <div className="menu__list">
+        {/* 섹스 */}
+      </div>
       <div className="menu__logo">
         <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>
       </div>

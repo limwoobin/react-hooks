@@ -1,5 +1,13 @@
+
 $primary-color: #0100FF;
 
 .root {
     color: $primary-color;
 }
+
+.btn {
+    color: $primary-color;
+    width: 200px;
+    background-color: white;
+}
+
