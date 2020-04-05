@@ -10,8 +10,9 @@ import Header from './layout/Header/Header';
 // import study from './study/hooksUseTitle';
 // import study from './study/hooksUseClick';
 // import study from './study/hooksUseConfirm';
-import study from './study/hooksUsePreventLeave';
-
+// import study from './study/hooksUsePreventLeave';
+// import study from './study/test';
+import study from './study/Average';
 
 const App = () => {
   return (
