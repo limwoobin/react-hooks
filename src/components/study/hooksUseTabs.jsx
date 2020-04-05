@@ -16,6 +16,7 @@ const useTabs = (initialTab , allTabs) => {
         return;
     }
     const [currentIndex , setCurrentIndex] = useState(initialTab);
+    console.log('changeItem?' ,  currentIndex);
     return {
         currentItem: allTabs[currentIndex],
         changeItem: setCurrentIndex

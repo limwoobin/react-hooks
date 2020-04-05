@@ -5,7 +5,10 @@ import DynamicPage from './DynamicPage';
 import NoMatch from './NoMatch';
 import Header from './layout/Header/Header';
 // import study from './study/hooksUseInput';
-import study from './study/hooksUseTabs';
+// import study from './study/hooksUseTabs';
+// import study from './study/hooksUseEffect';
+// import study from './study/hooksUseTitle';
+import study from './study/hooksUseClick';
 
 
 const App = () => {
