@@ -8,7 +8,9 @@ import Header from './layout/Header/Header';
 // import study from './study/hooksUseTabs';
 // import study from './study/hooksUseEffect';
 // import study from './study/hooksUseTitle';
-import study from './study/hooksUseClick';
+// import study from './study/hooksUseClick';
+// import study from './study/hooksUseConfirm';
+import study from './study/hooksUsePreventLeave';
 
 
 const App = () => {
