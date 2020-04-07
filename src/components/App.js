@@ -13,8 +13,8 @@ import Header from './layout/Header/Header';
 // import study from './study/hooksUsePreventLeave';
 // import study from './study/test';
 // import study from './study/Average';
-import study from './study/info';
-
+// import study from './study/info';
+import study from './study/UsePromiseSample';
 
 const App = () => {
   return (
