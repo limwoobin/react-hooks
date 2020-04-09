@@ -4,7 +4,9 @@ import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
 // import Icon from '@ant-design/icons';
 import './Sections/Header.scss';
-const Logo = require('../../images/logo.png');
+import MenuBtn from '../menu/menu';
+
+const Logo = require('../../../images/logo.png');
 
 function Header() {
   const [visible, setVisible] = useState(false)
@@ -20,7 +22,7 @@ function Header() {
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="menu__list">
-        {/* 섹스 */}
+        <MenuBtn mode="horizontal"/>
       </div>
       <div className="menu__logo">
         <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>

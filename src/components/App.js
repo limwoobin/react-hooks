@@ -3,19 +3,19 @@ import { Switch, BrowserRouter , Route } from 'react-router-dom';
 import Home from './Home';
 import DynamicPage from './DynamicPage';
 import NoMatch from './NoMatch';
-import Header from './layout/Header/Header';
+import Header from './views/layout/Header/Header';
 // import study from './study/hooksUseInput';
 // import study from './study/hooksUseTabs';
 // import study from './study/hooksUseEffect';
 // import study from './study/hooksUseTitle';
 // import study from './study/hooksUseClick';
-// import study from './study/hooksUseConfirm';
+import study from './study/hooksUseConfirm';
 // import study from './study/hooksUsePreventLeave';
 // import study from './study/test';
 // import study from './study/Average';
 // import study from './study/info';
 // import study from './study/UsePromiseSample';
-import study from './study/typejs/Counter';
+// import study from './study/typejs/Counter';
 
 const App = () => {
   return (
