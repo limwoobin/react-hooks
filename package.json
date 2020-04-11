@@ -1,7 +1,7 @@
 {
   "name": "react-hooks",
   "version": "1.0.0",
-  "main": "index.js",  
+  "main": "index.js",
   "proxy": "http://localhost:4000/",
   "repository": "https://github.com/limwoobin/react-hooks.git",
   "author": "drogba <drogba02@naver.com>",
@@ -38,6 +38,7 @@
     "@types/react-dom": "^16.9.6",
     "antd": "^4.1.0",
     "axios": "^0.19.2",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "formik": "^2.1.4",
     "moment": "^2.24.0",
     "react": "^16.13.1",
