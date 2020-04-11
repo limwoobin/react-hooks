@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useState , useEffect } from 'react';
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -7,7 +7,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import '../Header/Sections/Header.scss';
+import { API } from '../../../../api/Call_API';
+import Divider from '@material-ui/core/Divider';
+import { Link } from 'react-router-dom';
+import { Func } from '../../../../common/common';
+import './Menu.scss';
+
 
 const useStyles = makeStyles({
     list: {
@@ -18,15 +23,16 @@ const useStyles = makeStyles({
       }
 });
 
-
-const menuList = () => {
-    const arr = ['map' , 'test ' , 'test2'];
+const menuList = (menuItems) => {
+    console.log(menuItems);
     return <div>
                 <List>
-                    {arr.map((c) => (
-                        <ListItem button key={c}>
-                            <ListItemText primary={c} />
-                        </ListItem>
+                    {menuItems.sort(Func.Compare('id')).map((c) => (
+                        // <Link to={`/ctg/${c.routerName}`} key={c.id}>
+                            <ListItem button key={c.name}>
+                                <ListItemText primary={c.name} />
+                            </ListItem>
+                        // </Link>
                     ))}
                 </List>
             </div>
@@ -37,6 +43,19 @@ const Menu = () => {
     const [left , setLeft] = useState(false);
     const [menuItems , setMenuItems] = useState([]);
 
+    useEffect(() => {
+        _GetMenuItems();
+    } , []);
+
+    const _GetMenuItems = () => {
+        API.GET_Categories()
+        .then(res => {
+            setMenuItems(res.data.data)
+        }).catch(err => {
+            console.log(err);
+        })    
+    }
+
     const openSide = side => (
         <div
           role="presentation"
@@ -46,7 +65,7 @@ const Menu = () => {
             [classes.fullList]: side === 'top' || side === 'bottom',
           })}
         >
-          {menuList()}
+          {menuList(menuItems)}
         </div>
       );
 

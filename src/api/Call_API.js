@@ -1,22 +1,23 @@
 import axios from 'axios';
 
+const myServer = 'http://localhost:4000'
+
 const url = {
-    GET_Customers   : '/dr/customer/customers',
-    ADD_Customer    : '/dr/customer/insert',
-    ADD_Member      : '/dr/member/insert',
-    LOGIN           : '/dr/member/login',
-    LOGOUT          : '/dr/member/logout',
-    USER_EMAIL_CHK  : '/dr/member/overlap/check/',
-    GET_Categories  : '/dr/category/list',
-    GET_MainPage    : 'http://localhost:4000/',
-    GET_BoardList   : '/dr/board/list',
-    GET_BoardData   : '/dr/board/view/',
-    BoardInsert     : '/dr/board/write',
+    GET_Customers   : myServer + '/dr/customer/customers',
+    ADD_Customer    : myServer + '/dr/customer/insert',
+    ADD_Member      : myServer + '/dr/member/insert',
+    LOGIN           : myServer + '/dr/member/login',
+    LOGOUT          : myServer + '/dr/member/logout',
+    USER_EMAIL_CHK  : myServer + '/dr/member/overlap/check/',
+    GET_Categories  : myServer + '/dr/category/list',
+    GET_MainPage    : myServer,
+    GET_BoardList   : myServer + '/dr/board/list',
+    GET_BoardData   : myServer + '/dr/board/view/',
+    BoardInsert     : myServer + '/dr/board/write',
 }
 
 const config = {
     headers: {
-     
         'Content-Type': 'application/json'
     }
 }
