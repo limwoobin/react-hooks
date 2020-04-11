@@ -14,6 +14,8 @@ import { Func } from '../../../../common/common';
 import './Menu.scss';
 
 
+// 메뉴리스트값들은 추후 정적인 값으로 변경 예정
+
 const useStyles = makeStyles({
     list: {
         width: 250,
@@ -24,15 +26,14 @@ const useStyles = makeStyles({
 });
 
 const menuList = (menuItems) => {
-    console.log(menuItems);
     return <div>
                 <List>
                     {menuItems.sort(Func.Compare('id')).map((c) => (
-                        // <Link to={`/ctg/${c.routerName}`} key={c.id}>
+                        <Link to={`/ctg/${c.routerName}`} key={c.id}>
                             <ListItem button key={c.name}>
                                 <ListItemText primary={c.name} />
                             </ListItem>
-                        // </Link>
+                         </Link>
                     ))}
                 </List>
             </div>
