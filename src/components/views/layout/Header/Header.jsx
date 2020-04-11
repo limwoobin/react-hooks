@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
-// import Icon from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import './Sections/Header.scss';
-import MenuBtn from '../menu/menu';
+import MenuBtn from '../menu/Menu';
 
-const Logo = require('../../../images/logo.png');
+const Logo = require('../../../images/mainLogo.png');
 
 function Header() {
   const [visible, setVisible] = useState(false)
@@ -21,8 +21,8 @@ function Header() {
 
   return (
     <nav className="menu" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-      <div className="menu__list">
-        <MenuBtn mode="horizontal"/>
+      <div className="menu__btn" >
+        <MenuBtn />
       </div>
       <div className="menu__logo">
         <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>
@@ -39,7 +39,7 @@ function Header() {
           type="primary"
           onClick={showDrawer}
         >
-          {/* <Icon type="align-right" /> */}
+          <Icon type="align-right" />
         </Button>
         <Drawer
           title="Basic Drawer"

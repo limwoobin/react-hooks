@@ -7,16 +7,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-// import Divider from '@material-ui/core/Divider';
+import '../Header/Sections/Header.scss';
 
-const useStyles = makeStyles({
-    list: {
-      width: 250,
-    },
-    fullList: {
-      width: 'auto',
-    },
-});
+const useStyles = makeStyles((theme) => ({
+    
+  })
+);
+
 
 const menuList = () => {
     const arr = ['map' , 'test ' , 'test2'];
@@ -60,15 +57,15 @@ const Menu = () => {
     }
 
     return (
-        <div>
+        <div className="menu__btn">
             <IconButton 
-                // className={classes.menuButton} 
                 color='inherit' 
-                aria-label="Open drawer"
+                aria-label="open drawer"
                 onClick={toggleDrawer('left', true)}
             >
                 <MenuIcon />
             </IconButton>
+
             <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
                 {openSide('left')}
             </Drawer>
