@@ -1,8 +1,8 @@
 import React from 'react';
 import { Menu } from 'antd';
-import MenuBtn from '../../menu/Menu';
 
-function LeftMenu(props) {
+
+const LeftMenu = (props) => {  
   return (
     <Menu mode={props.mode}>
     <Menu.Item key="mail">

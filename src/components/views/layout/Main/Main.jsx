@@ -8,6 +8,7 @@ import {
    ,Map
    ,Think
    ,BoardList
+   ,LoginView
 } 
 from '../../../page/page';
 
@@ -16,6 +17,7 @@ const Main = () => {
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={LoginView} />
                     <Route path = "/ctg/profile" component={Profile} />
                     <Route path = "/ctg/notice" component={Notice} />
                     <Route path = "/ctg/think" component={Think} />
