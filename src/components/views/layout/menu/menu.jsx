@@ -9,43 +9,44 @@ import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import '../Header/Sections/Header.scss';
 
-const useStyles = makeStyles((theme) => ({
-    
-  })
-);
+const useStyles = makeStyles({
+    list: {
+        width: 250,
+      },
+      fullList: {
+        width: 'auto',
+      }
+});
 
 
 const menuList = () => {
     const arr = ['map' , 'test ' , 'test2'];
-    <div>
-        <List>
-            {arr.map((c) => {
-                <ListItem>
-                    <ListItemText primary={c} />
-                </ListItem>
-            })}
-        </List>
-    </div>
+    return <div>
+                <List>
+                    {arr.map((c) => (
+                        <ListItem button key={c}>
+                            <ListItemText primary={c} />
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
 }
 
 const Menu = () => {
     const classes = useStyles();
-    // const [left , setLeft] = useState(false);
-    const [state , setState] = useState({
-        left: false,
-        menuItems: [],
-    });
+    const [left , setLeft] = useState(false);
+    const [menuItems , setMenuItems] = useState([]);
 
     const openSide = side => (
         <div
           role="presentation"
           onClick={toggleDrawer(side, false)}
           onKeyDown={toggleDrawer(side, false)}
-          className={clsx(classes.list, {
-            [classes.fullList]: 'left',
+          className={clsx(classes.list , {
+            [classes.fullList]: side === 'top' || side === 'bottom',
           })}
         >
-          {menuList}
+          {menuList()}
         </div>
       );
 
@@ -53,7 +54,7 @@ const Menu = () => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
           }
-          setState(left(open));
+          setLeft(open);
     }
 
     return (
@@ -66,7 +67,7 @@ const Menu = () => {
                 <MenuIcon />
             </IconButton>
 
-            <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+            <Drawer open={left} onClose={toggleDrawer('left', false)}>
                 {openSide('left')}
             </Drawer>
         </div>

@@ -2,6 +2,7 @@
   "name": "react-hooks",
   "version": "1.0.0",
   "main": "index.js",
+  "proxy": "http://localhosdt:4000/",
   "repository": "https://github.com/limwoobin/react-hooks.git",
   "author": "drogba <drogba02@naver.com>",
   "license": "MIT",

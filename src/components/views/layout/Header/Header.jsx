@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
-import Icon from '@ant-design/icons';
 import './Sections/Header.scss';
 import MenuBtn from '../menu/Menu';
-
-const Logo = require('../../../images/mainLogo.png');
+// import Logo from '../../../images/smallLogo.png';
+const Logo = '';
 
 function Header() {
   const [visible, setVisible] = useState(false)
@@ -39,7 +38,7 @@ function Header() {
           type="primary"
           onClick={showDrawer}
         >
-          <Icon type="align-right" />
+          AAAA
         </Button>
         <Drawer
           title="Basic Drawer"
