@@ -12,7 +12,7 @@ const RightMenu = (props) => {
         <Link to="/login">Signin</Link>
       </Menu.Item>
       <Menu.Item key="app">
-        <a href="/register">Signup</a>
+        <Link to="/register">SignUp</Link>
       </Menu.Item>
     </Menu>
   )
