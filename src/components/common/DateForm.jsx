@@ -3,11 +3,14 @@ import 'date-fns';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
-
+// import DialogForm from './DialogForm';
 
 const DateForm = () => {
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const handleDateChange = (date) => {
+        if(date >= new Date()){
+            alert('선택하신 날짜가 맞지 않습니다.');
+        }
         setSelectedDate(dateConvert(date));
     };
 
@@ -28,7 +31,7 @@ const DateForm = () => {
                     margin="normal"
                     id="date-picker-dialog"
                     label="Date picker dialog"
-                    format="MM/dd/yyyy"
+                    format="yyyy/MM/dd"
                     value={selectedDate}
                     onChange={handleDateChange}
                     KeyboardButtonProps={{
