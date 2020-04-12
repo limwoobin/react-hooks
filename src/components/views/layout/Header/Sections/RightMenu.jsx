@@ -1,6 +1,5 @@
 import React from 'react';
 import { Menu } from 'antd';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
