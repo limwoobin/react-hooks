@@ -27,9 +27,9 @@ function Header() {
         <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>
       </div>
       <div className="menu__container">
-        <div className="menu_left">
+        {/* <div className="menu_left">
           <LeftMenu mode="horizontal" />
-        </div>
+        </div> */}
         <div className="menu_rigth">
           <RightMenu mode="horizontal" />
         </div>
