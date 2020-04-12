@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -35,7 +35,11 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = () => {
     const classes = useStyles();
-
+    const [birthday , setBirthday] = useState('');
+    const BirthdayCallback = (callBackDate) => {
+        setBirthday(callBackDate);
+    }
+    
     return (
         <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -110,7 +114,8 @@ const SignUp = () => {
                     asdasd
                 </Grid>
                 <Grid item xs={12}>
-                <DateForm />
+                <DateForm callBackDate={BirthdayCallback}/>
+                {/* <DateForm name="test" /> */}
                 </Grid>
                 <Grid item xs={12}>
                 <FormControlLabel

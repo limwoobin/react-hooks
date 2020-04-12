@@ -5,13 +5,14 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 // import DialogForm from './DialogForm';
 
-const DateForm = () => {
+const DateForm = (props) => {
     const [selectedDate, setSelectedDate] = React.useState(new Date());
     const handleDateChange = (date) => {
         if(date >= new Date()){
             alert('선택하신 날짜가 맞지 않습니다.');
         }
         setSelectedDate(dateConvert(date));
+        props.callBackDate(dateConvert(date));
     };
 
     const dateConvert = (changeDate) => {
