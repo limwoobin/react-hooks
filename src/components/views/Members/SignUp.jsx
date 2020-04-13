@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import DateForm from '../../common/DateForm';
+import CopyRight from '../../common/CopyRight';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -111,11 +112,7 @@ const SignUp = () => {
                 />
                 </Grid>
                 <Grid item xs={12}>
-                    asdasd
-                </Grid>
-                <Grid item xs={12}>
                 <DateForm callBackDate={BirthdayCallback}/>
-                {/* <DateForm name="test" /> */}
                 </Grid>
                 <Grid item xs={12}>
                 <FormControlLabel
@@ -142,6 +139,7 @@ const SignUp = () => {
             </Grid>
             </form>
         </div>
+        <CopyRight />
         </Container>
     )
 }
