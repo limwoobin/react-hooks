@@ -49,7 +49,7 @@ const SignUp = () => {
             <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-            Sign up
+            회원가입
             </Typography>
             <form className={classes.form} noValidate>
             <Grid container spacing={2}>

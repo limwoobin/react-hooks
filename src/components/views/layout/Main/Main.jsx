@@ -10,6 +10,7 @@ import {
    ,BoardList
    ,SignIn
    ,SignUp
+   ,hooksUseInput
 } 
 from '../../../page/page';
 
@@ -20,6 +21,8 @@ const Main = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={SignIn} />
                 <Route exact path="/register" component={SignUp} />
+                <Route exact path="/register" component={SignUp} />
+                <Route exact path="/hooks" component={hooksUseInput} />
                     <Route path = "/ctg/profile" component={Profile} />
                     <Route path = "/ctg/notice" component={Notice} />
                     <Route path = "/ctg/think" component={Think} />
