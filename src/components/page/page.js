@@ -6,3 +6,4 @@ export {default as Think} from '../views/MenuPage/Think';
 export {default as SignIn} from '../views/Members/SignIn';
 export {default as SignUp} from '../views/Members/SignUp';
 export {default as hooksUseInput} from '../study/hooksUseInput';
+export {default as test} from '../study/test';

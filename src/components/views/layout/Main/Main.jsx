@@ -3,14 +3,15 @@ import { Route , Switch } from 'react-router-dom';
 import Home from '../../../Home';
 import NoMatch from '../../../NoMatch';
 import { 
-   Profile
+    Profile
    ,Notice
    ,Map
    ,Think
    ,BoardList
    ,SignIn
    ,SignUp
-   ,hooksUseInput
+//    ,hooksUseInput
+    ,test
 } 
 from '../../../page/page';
 
@@ -22,7 +23,7 @@ const Main = () => {
                 <Route exact path="/login" component={SignIn} />
                 <Route exact path="/register" component={SignUp} />
                 <Route exact path="/register" component={SignUp} />
-                <Route exact path="/hooks" component={hooksUseInput} />
+                <Route exact path="/hooks" component={test} />
                     <Route path = "/ctg/profile" component={Profile} />
                     <Route path = "/ctg/notice" component={Notice} />
                     <Route path = "/ctg/think" component={Think} />
