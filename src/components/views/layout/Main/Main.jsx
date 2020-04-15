@@ -22,7 +22,6 @@ const Main = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={SignIn} />
                 <Route exact path="/register" component={SignUp} />
-                <Route exact path="/register" component={SignUp} />
                 <Route exact path="/hooks" component={test} />
                     <Route path = "/ctg/profile" component={Profile} />
                     <Route path = "/ctg/notice" component={Notice} />

@@ -13,6 +13,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import DateForm from '../../common/DateForm';
 import CopyRight from '../../common/CopyRight';
+import { Func } from '../../../common/common';
+
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -36,10 +38,52 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = () => {
     const classes = useStyles();
-    const [birthday , setBirthday] = useState('');
+    const [value , setValue] = useState({
+        name: '',
+        userEmail: '',
+        password: '',
+        password2: '',
+        birthday: Func.DateFormat2(new Date()),
+        accept : false
+    });
+
+    const {name , userEmail , password , password2 , birthday , accept} = value;
+
     const BirthdayCallback = (callBackDate) => {
-        setBirthday(callBackDate);
+        setValue({
+            ...value , birthday : callBackDate
+        })
+    };
+
+    const handleValueChange = (e) => {
+        setValue({
+            ...value , [e.target.name] : e.target.value
+        })
     }
+    
+    const toggleCheckbox = (e) => {
+        console.log('e' , e.target.value);
+        console.log(typeof e.target.value);
+        if(e.target.value === 'false'){
+            setValue({
+                ...value , [e.target.name] : true
+            })
+        }else{
+            setValue({
+                ...value , [e.target.name] : false
+            })
+        }
+    }
+
+    const SignUpSubmit = () => {
+        console.log('name' , name);
+        console.log('userEmail' , userEmail);
+        console.log('password' , password);
+        console.log('password2' , password2);
+        console.log('birthday' , birthday);
+        console.log('accept' , accept);
+    }
+    
     
     return (
         <Container component="main" maxWidth="xs">
@@ -50,30 +94,20 @@ const SignUp = () => {
             </Avatar>
             <Typography component="h1" variant="h5">
             회원가입
+            {accept === false ? 'false' : 'true'}
+            <br />{name}
             </Typography>
             <form className={classes.form} noValidate>
             <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                <TextField
-                    autoComplete="fname"
-                    name="firstName"
-                    variant="outlined"
-                    required
-                    fullWidth
-                    id="firstName"
-                    label="First Name"
-                    autoFocus
-                />
-                </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12}>
                 <TextField
                     variant="outlined"
                     required
                     fullWidth
-                    id="lastName"
-                    label="Last Name"
-                    name="lastName"
-                    autoComplete="lname"
+                    label="name"
+                    name="name"
+                    onChange={handleValueChange}
+                    value={name}
                 />
                 </Grid>
                 <Grid item xs={12}>
@@ -81,10 +115,10 @@ const SignUp = () => {
                     variant="outlined"
                     required
                     fullWidth
-                    id="email"
                     label="Email Address"
-                    name="email"
-                    autoComplete="email"
+                    name="userEmail"
+                    onChange={handleValueChange}
+                    value={userEmail}
                 />
                 </Grid>
                 <Grid item xs={12}>
@@ -95,8 +129,8 @@ const SignUp = () => {
                     name="password"
                     label="Password"
                     type="password"
-                    id="password"
-                    autoComplete="current-password"
+                    onChange={handleValueChange}
+                    value={password}
                 />
                 </Grid>
                 <Grid item xs={12}>
@@ -106,9 +140,9 @@ const SignUp = () => {
                     fullWidth
                     name="password2"
                     label="Password Check"
-                    type="password2"
-                    id="password2"
-                    autoComplete="current-password"
+                    type="password"
+                    onChange={handleValueChange}
+                    value={password2}
                 />
                 </Grid>
                 <Grid item xs={12}>
@@ -116,17 +150,18 @@ const SignUp = () => {
                 </Grid>
                 <Grid item xs={12}>
                 <FormControlLabel
-                    control={<Checkbox value="allowExtraEmails" color="primary" />}
+                    control={<Checkbox color="primary" value={accept} onClick={toggleCheckbox}/>}
                     label="I want to receive inspiration, marketing promotions and updates via email."
+                    name="accept"
                 />
                 </Grid>
             </Grid>
             <Button
-                type="submit"
                 fullWidth
                 variant="contained"
                 color="primary"
                 className={classes.submit}
+                onClick={SignUpSubmit}
             >
                 Sign Up
             </Button>
