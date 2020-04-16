@@ -23,15 +23,12 @@ const Home = () => {
   return (
     <div>
       <p>안녕하세요 리액트를 위한 웹팩.</p>
-      <p>
         <input name="username" />
         <input name="text" value={text} onChange={updateField} />
         <Link to="/hooks">Hooks Input로 이동</Link>
-
-        <h1>{count}</h1>
-        <button onClick={onIncrease}>+</button>
-        <button onClick={onDecrease}>-</button>
-      </p>
+          <h1>{count}</h1>
+        <button onClick={() => onIncrease}>+</button>
+        <button onClick={() => onDecrease}>-</button>
     </div>
   );
 };

@@ -14,8 +14,6 @@ import { Func } from '../../../../common/common';
 import './Menu.scss';
 
 
-// 메뉴리스트값들은 추후 정적인 값으로 변경 예정
-
 const useStyles = makeStyles({
     list: {
         width: 250,

@@ -10,8 +10,7 @@ import {
    ,BoardList
    ,SignIn
    ,SignUp
-//    ,hooksUseInput
-    ,test
+   ,test
 } 
 from '../../../page/page';
 
@@ -20,10 +19,10 @@ const Main = () => {
         <div>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={SignIn} />
-                <Route exact path="/register" component={SignUp} />
-                <Route exact path="/hooks" component={test} />
-                    <Route path = "/ctg/profile" component={Profile} />
+                <Route path="/login" component={SignIn} />
+                <Route path="/register" component={SignUp} />
+                <Route path="/hooks" component={test} />
+                    <Route path = "/ctg/profile" component={Profile} />    
                     <Route path = "/ctg/notice" component={Notice} />
                     <Route path = "/ctg/think" component={Think} />
                     <Route path = "/ctg/board" component={BoardList} />
