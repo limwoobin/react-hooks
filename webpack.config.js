@@ -1,6 +1,7 @@
 // const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 3000;
+const path = require('path');
 
 module.exports = {
     mode:'development',
@@ -9,7 +10,7 @@ module.exports = {
     ],
     output:{
         filename: 'bundle.js',
-        path:__dirname + '/build'
+        path: path.resolve(__dirname + 'build')
     },
     mode: 'none',
     resolve:{
@@ -55,8 +56,9 @@ module.exports = {
     devtool: 'inline-source-map',
     plugins:[
         new HtmlWebpackPlugin({
-            template: 'public/index.html',
-            favicon: 'public/favicon.png'
+            template: './public/index.html',
+            favicon: './public/favicon.png',
+            filename: 'index.html'
         })
     ],
     devServer: {

@@ -22,11 +22,11 @@ const Main = () => {
                 <Route path="/login" component={SignIn} />
                 <Route path="/register" component={SignUp} />
                 <Route path="/hooks" component={test} />
-                    <Route path = "/ctg/profile" component={Profile} />    
-                    <Route path = "/ctg/notice" component={Notice} />
-                    <Route path = "/ctg/think" component={Think} />
-                    <Route path = "/ctg/board" component={BoardList} />
-                    <Route path = "/ctg/map" component={Map} />
+                    <Route path="/ctg/profile" component={Profile} />    
+                    <Route path="/ctg/notice" component={Notice} />
+                    <Route path="/ctg/think" component={Think} />
+                    <Route path="/ctg/board" component={BoardList} />
+                    <Route path="/ctg/map" component={Map} />
                 <Route component={NoMatch} />
             </Switch>
         </div>
