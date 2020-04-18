@@ -1,11 +1,11 @@
-import React from 'react';
+import React , { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +13,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import CopyRight from '../../common/CopyRight';
 import FindPasswordForm from './FindPasswordForm';
-
+import { Func } from '../../../common/common';
+import { API } from '../../../api/Call_API';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -38,6 +39,49 @@ const useStyles = makeStyles((theme) => ({
 
 const SignIn = () => {
     const classes = useStyles();
+    const [value , setValue] = useState({
+      userEmail : '',
+      password : '',
+      rememberEmail : false,
+    });
+
+    const { userEmail , password , rememberEmail } = value;
+
+    const handleValueChange = (e) => {
+      setValue({
+        ...value , [e.target.name] : e.target.value
+      })
+    }
+    
+    const toggleCheckbox = (e) => {
+      setValue({
+          ...value,
+          [e.target.name] : !rememberEmail
+      })
+    }
+
+    const LoginSubmit = () => {
+        if(!Func.setVerifyEmail(userEmail)){
+          alert('이메일을 확인해주세요.');
+          return;
+        }else if(!Func.emptyCheck(password)){
+          alert('비밀번호를 입력해주세요.');
+          return;
+        }
+        memberLogin();
+    }
+
+    const memberLogin = () => {      
+      const formData = new FormData();
+      formData.append('userEmail' , userEmail);
+      formData.append('userPwd' , password);
+      API.LOGIN(formData)
+      .then(res => {
+        console.log(res);
+      }).catch(err => {
+        console.log(err);
+      });
+    }
 
     return(
         <Container component="main" maxWidth="xs">
@@ -55,10 +99,10 @@ const SignIn = () => {
               margin="normal"
               required
               fullWidth
-              id="email"
               label="Email Address"
-              name="email"
-              autoComplete="email"
+              name="userEmail"
+              onChange={handleValueChange}
+              value={userEmail}
               autoFocus
             />
             <TextField
@@ -69,19 +113,20 @@ const SignIn = () => {
               name="password"
               label="Password"
               type="password"
-              id="password"
-              autoComplete="current-password"
+              onChange={handleValueChange}
+              value={password}
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox color="primary" value={rememberEmail} onClick={toggleCheckbox}/>}
               label="Remember me"
+              name="rememberEmail"
             />
             <Button
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={LoginSubmit}
             >
               Sign In
             </Button>
@@ -90,7 +135,7 @@ const SignIn = () => {
                 <FindPasswordForm />
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link to="/register" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
