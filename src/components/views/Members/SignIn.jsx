@@ -78,6 +78,11 @@ const SignIn = () => {
       API.LOGIN(formData)
       .then(res => {
         console.log(res);
+        if(res.data.code === 'DR00'){
+          window.sessionStorage.isLogin=true;
+          window.sessionStorage.loggedInUserEmail = userEmail;
+          window.location.href = "/";
+        }
       }).catch(err => {
         console.log(err);
       });

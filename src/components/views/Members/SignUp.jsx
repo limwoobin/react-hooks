@@ -103,7 +103,7 @@ const SignUp = () => {
         API.USER_EMAIL_CHK(userEmail)
         .then(res => {
             console.log(res);
-            if(res.data.code == 'DR00'){
+            if(res.data.code === 'DR00'){
                 addMemberInfo();
             }else{
                 alert('이미 가입된 이메일입니다.');
@@ -115,7 +115,6 @@ const SignUp = () => {
     }
     
     const addMemberInfo = () => {
-        // userEmailChk(userEmail);
         const formData = new FormData();
         formData.append('userNm' , userNm);
         formData.append('userEmail' , userEmail);
