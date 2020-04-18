@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
 import './Sections/Header.scss';
-// import MenuBtn from '../menu/Menu';
 import MenuBtn from '../Menu/Menu';
-// import Logo from '../../../images/smallLogo.png';
 const Logo = '';
 
 function Header() {
@@ -24,7 +22,9 @@ function Header() {
         <MenuBtn />
       </div>
       <div className="menu__logo">
-        <a href="/"><img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} /></a>
+        <a href="/">
+          <img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} />
+        </a>
       </div>
       <div className="menu__container">
         <div className="menu_rigth">

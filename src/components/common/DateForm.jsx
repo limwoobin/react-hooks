@@ -9,6 +9,7 @@ const DateForm = (props) => {
     const handleDateChange = (date) => {
         if(date >= new Date()){
             alert('선택하신 날짜가 맞지 않습니다.');
+            return;
         }
         setSelectedDate(dateConvert(date));
         props.callBackDate(dateConvert(date));

@@ -5,10 +5,23 @@ const emailRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA
 export const Func = {
     setVerifyEmail : (email) => {
         if(email.match(emailRegExp) == null || email === null || email === ''){
-            alert('Please check your Email'); 
-            return 'FAIL';
+            return false;
         }else{
-            return 'SUCCESS';
+            return true;
+        }
+    },
+    emptyCheck : (data) => {
+        if(!data){
+            return false;
+        }else{
+            return true;
+        }
+    },
+    passwordCheck : (password) => {
+        if(!/^[a-zA-Z0-9]{8,12}$/.test(password)){
+            return false;
+        }else{
+            return true
         }
     },
     Compare : (key) => {
