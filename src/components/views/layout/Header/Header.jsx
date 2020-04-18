@@ -3,7 +3,7 @@ import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
 import './Sections/Header.scss';
 // import MenuBtn from '../menu/Menu';
-import MenuBtn from '../Menu/menu';
+import MenuBtn from '../Menu/Menu';
 // import Logo from '../../../images/smallLogo.png';
 const Logo = '';
 

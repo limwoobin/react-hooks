@@ -1,18 +1,17 @@
-// const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 3000;
 const path = require('path');
 
 module.exports = {
-    mode:'development',
+    mode:'none',
     entry: [
         './src/index.js',
     ],
     output:{
         filename: 'bundle.js',
-        path: path.resolve(__dirname + 'build')
+        path: path.resolve(__dirname + '/build'),
+        publicPath: '/build/',
     },
-    mode: 'none',
     resolve:{
         extensions: [".jsx" , ".js" , ".tsx" , ".ts"]
     },

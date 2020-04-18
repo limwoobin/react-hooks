@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route , Switch } from 'react-router-dom';
 import Home from '../../../Home';
-import NoMatch from '../../../NoMatch';
 import { 
     Profile
    ,Notice
@@ -9,10 +8,11 @@ import {
    ,Think
    ,BoardList
    ,SignIn
+   ,NoMatch
    ,SignUp
    ,test
 } 
-from '../../../page/page';
+from '../../../page/pages';
 
 const Main = () => {
     return (
