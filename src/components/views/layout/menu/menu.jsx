@@ -34,6 +34,7 @@ const menuList = (menuItems) => {
                          </Link>
                     ))}
                 </List>
+                <Divider />
             </div>
 }
 
