@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
@@ -27,9 +28,10 @@ const menuList = (menuItems) => {
     return <div>
                 <List>
                     {menuItems.sort(Func.Compare('id')).map((c) => (
-                        <Link to={`/ctg/${c.routerName}`} key={c.id}>
+                        <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem">
                             <ListItem button key={c.name}>
                                 <ListItemText primary={c.name} />
+                                <ListItemIcon>count</ListItemIcon>
                             </ListItem>
                          </Link>
                     ))}
@@ -56,20 +58,18 @@ const Menu = () => {
         })    
     }
 
-    const openSide = side => (
+    const openSide = () => (
         <div
           role="presentation"
-          onClick={toggleDrawer(side, false)}
-          onKeyDown={toggleDrawer(side, false)}
-          className={clsx(classes.list , {
-            [classes.fullList]: side === 'top' || side === 'bottom',
-          })}
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
+          className={clsx(classes.list)}
         >
           {menuList(menuItems)}
         </div>
       );
 
-    const toggleDrawer = (side , open) => event => {
+    const toggleDrawer = (open) => event => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
           }
@@ -81,12 +81,12 @@ const Menu = () => {
             <IconButton 
                 color='inherit' 
                 aria-label="open drawer"
-                onClick={toggleDrawer('left', true)}
+                onClick={toggleDrawer(true)}
             >
                 <MenuIcon />
             </IconButton>
 
-            <Drawer open={left} onClose={toggleDrawer('left', false)}>
+            <Drawer open={left} onClose={toggleDrawer(false)}>
                 {openSide('left')}
             </Drawer>
         </div>
