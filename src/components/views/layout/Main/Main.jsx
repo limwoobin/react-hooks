@@ -11,6 +11,7 @@ import {
    ,NoMatch
    ,SignUp
    ,test
+   ,BoardRouter
 } 
 from '../../../page/pages';
 
@@ -22,7 +23,7 @@ const Main = () => {
                 <Route path="/ctg/profile" component={Profile} />    
                 <Route path="/ctg/notice" component={Notice} />
                 <Route path="/ctg/think" component={Think} />
-                <Route path="/ctg/board" component={BoardList} />
+                <Route path="/ctg/board" component={BoardRouter} />
                 <Route path="/ctg/map" component={Map} />
                 <Route path="/login" component={SignIn} />
                 <Route path="/register" component={SignUp} />

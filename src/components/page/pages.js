@@ -8,3 +8,4 @@ export {default as SignUp} from '../views/Members/SignUp';
 export {default as hooksUseInput} from '../study/hooksUseInput';
 export {default as test} from '../study/test';
 export {default as NoMatch} from '../NoMatch';
+export {default as BoardRouter} from '../views/board/BoardRouter';
