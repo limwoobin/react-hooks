@@ -6,7 +6,6 @@ import {
    ,Notice
    ,Map
    ,Think
-   ,BoardList
    ,SignIn
    ,NoMatch
    ,SignUp
