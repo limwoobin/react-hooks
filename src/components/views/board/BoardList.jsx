@@ -58,7 +58,6 @@ const BoardList = () => {
                     <Button variant="contained" color="primary">추가</Button>
                 </Link>
             </div>
-            <br />
             <TableContainer component={Paper}>
                     <Table className="table" aria-label="simple table">
                         <TableHead>

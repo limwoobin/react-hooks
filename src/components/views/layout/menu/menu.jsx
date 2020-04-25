@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
@@ -31,7 +30,7 @@ const menuList = (menuItems) => {
                         <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem">
                             <ListItem button key={c.name}>
                                 <ListItemText primary={c.name} />
-                                <ListItemIcon>count</ListItemIcon>
+                                {c.id}
                             </ListItem>
                          </Link>
                     ))}
