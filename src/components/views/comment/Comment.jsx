@@ -4,7 +4,7 @@ import ChildComment from './ChildComment';
 import { Func } from '../../../common/common';
 
 const Comment = (props) => {
-    const {userEmail , content , modiDate , childComments} = props;
+    const {image , userEmail , content , modiDate , childComments} = props;
     const renderChildComments = (data) => {
         console.log('data:' + data);
         return data.map((c) => {
@@ -21,7 +21,7 @@ const Comment = (props) => {
 
     return (
         <div>
-            {userEmail} : {content} &nbsp; {Func.DateFormat(modiDate)} <br/>
+            {image}{userEmail} : {content} &nbsp; {Func.DateFormat(modiDate)} <br/>
             {childComments ? renderChildComments(childComments)
             : ''}
             &nbsp;
