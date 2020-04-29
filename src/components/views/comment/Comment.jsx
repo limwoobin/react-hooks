@@ -21,7 +21,7 @@ const Comment = (props) => {
 
     return (
         <div>
-            {image}{userEmail} : {content} &nbsp; {Func.DateFormat(modiDate)} <br/>
+            {userEmail} : {content} &nbsp; {Func.DateFormat(modiDate)} <br/>
             {childComments ? renderChildComments(childComments)
             : ''}
             &nbsp;
