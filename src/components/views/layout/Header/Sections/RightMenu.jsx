@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { API } from '../../../../../api/Call_API';
+import './Header.scss';
 
 const RightMenu = (props) => {  
   const isLogin = window.sessionStorage.getItem('isLogin');
@@ -27,12 +28,12 @@ const RightMenu = (props) => {
                     <>
                       <Menu mode={props.mode}>
                       <Menu.Item key="user">
-                        <Link to="#">
+                        <Link to="#" className="link-router" style={{ textDecoration: 'none' }}>
                           [{loggedInUserEmail}] 님 환영합니다.
                         </Link>
                         </Menu.Item>
                         <Menu.Item key="logout" onClick={userLogout}>
-                          <Link to="#">Logout</Link>
+                          <Link to="#" className="link-router" style={{ textDecoration: 'none' }}>Logout</Link>
                         </Menu.Item>
                       </Menu>
                     </>;
@@ -40,10 +41,10 @@ const RightMenu = (props) => {
     renderSignbtn = <>
                       <Menu mode={props.mode}>
                         <Menu.Item key="login">
-                          <Link to="/login">Signin</Link>
+                          <Link to="/login" className="link-router" style={{ textDecoration: 'none' }}>Signin</Link>
                         </Menu.Item>
                         <Menu.Item key="app">
-                          <Link to="/register">SignUp</Link>
+                          <Link to="/register" className="link-router" style={{ textDecoration: 'none' }}>SignUp</Link>
                         </Menu.Item>
                       </Menu>
                     </>;
