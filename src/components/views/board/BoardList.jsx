@@ -46,6 +46,7 @@ const BoardList = () => {
                             content={c.content}
                             regDate={c.regDate}
                             views={c.views}
+                            image={c.image}
                         />
         })
     }

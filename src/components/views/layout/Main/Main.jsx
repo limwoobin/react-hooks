@@ -16,7 +16,7 @@ from '../../../page/pages';
 
 const Main = () => {
     return (
-        <div>
+        <div style={{backgroundColor: 'white'}}>
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/ctg/profile" component={Profile} />    

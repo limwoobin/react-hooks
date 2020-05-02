@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Func } from '../../../common/common';
 
 const Board = (props) => {
-    const {_id , boardId , userEmail , title , views , regDate } = props;
+    const {_id , boardId , userEmail , title , views , regDate , image} = props;
 
     return (
         <TableRow key={boardId}>

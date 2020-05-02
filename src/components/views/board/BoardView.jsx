@@ -6,6 +6,8 @@ import Divider from '@material-ui/core/Divider';
 import { API } from '../../../api/Call_API';
 import { Func } from '../../../common/common';
 import Comment from '../../views/comment/Comment';
+import './BoardView.scss';
+
 
 const BoardView = (props) => {
     const [value , setValue] = useState({
@@ -20,7 +22,7 @@ const BoardView = (props) => {
         regDate: '',
     })
 
-    const {_id , id , views , userEmail , boardType , title , content , comments , regDate} = value;
+    const {_id , id , views , userEmail , boardType , title , content , comments , regDate , image} = value;
 
     useEffect(() => {
         API.GET_BoardData(id)
@@ -57,24 +59,29 @@ const BoardView = (props) => {
     }
 
     return (
-        <div>
+        <div className="main">
             <CssBaseline />
             <Container maxWidth="md">
-            <Typography component="div" style={{ backgroundColor: '#F6F6F6' , minHeight:'100%' , fontSize: '15px' , textAlign: 'left'}}>
-            <div>
-                조회수 : {views} <br/>
-                제목 : {title} <br/>
-                작성자 : {userEmail} <br/>
-                작성일시 : {regDate} <br/>
-                <br /><br />
-                <Divider />
-                내용 : {content} <br/>
-                <pre>
-                    <code>var x = 5;</code>
-                </pre>  
-                <br /><br />
+            <Typography component="div" className="mainArea">
+            <div className="sc-kgAjT gXJKuQ sc-gGBfsJ kVIKkh">
+                <div className="head-wrapper">
+                    <h1 align="left">
+                        {title}
+                    </h1>
+                    <div className="sc-jnlKLf efgoQf">
+                        <div className="information">
+                            <span className="userEmail">{userEmail}</span>
+                            <span class="separator">·</span>
+                            <span>{regDate}</span>
+                        </div>
+                        <div className="sc-hEsumM dBRwrG">
+                            조회수: {views}
+                        </div>
+                    </div>
+                    <img src="https://media.vlpt.us/images/snoop2head/post/9215b9f1-3c39-4ca0-9ab9-e03a048545f8/running-573762_1920.jpg" alt="post-thumbnail" class="sc-tilXH cAPLHZ" />
+                </div>
             </div>
-            <Divider />
+
             {comments ?
                 renderComments(comments) :
                 '댓글이 없습니다.'
