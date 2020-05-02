@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const myServer = 'http://localhost:4000'
+// const myServer = 'http://localhost:4000'
 
 const url = {
     GET_Customers   : '/dr/customer/customers',
@@ -14,6 +14,7 @@ const url = {
     GET_BoardList   : '/dr/board/list',
     GET_BoardData   : '/dr/board/view/',
     BoardInsert     : '/dr/board/write',
+    CommentInsert   : '/dr/comment/write',
 }
 
 const config = {
@@ -34,4 +35,5 @@ export const API = {
     GET_BoardList       : () => axios.get(url.GET_BoardList, config),
     GET_BoardData       : (data) => axios.get(url.GET_BoardData + data , config),
     BoardInsert         : (data) => axios.post(url.BoardInsert , data , config),
+    CommentInsert       : (data) => axios.post(url.CommentInsert , data , config),
 }

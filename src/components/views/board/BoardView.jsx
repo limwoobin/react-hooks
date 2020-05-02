@@ -90,9 +90,12 @@ const BoardView = (props) => {
                 </div>
             </div>
             <div className="sc-kgAjT gXJKuQ sc-iELTvK cGalOa">
-                <h4>N의 댓글</h4>
+                <h4>{comments.length}개의 댓글</h4>
                 <div className="sc-cmTdod kHxQNt">
-                    <CommentWrite />
+                    <CommentWrite 
+                        _id={_id}
+                        userEmail={window.sessionStorage.loggedInUserEmail}
+                    />
                     <div className="sc-hwwEjo hQpbXX">
                         <div className="sc-iyvyFf kwHKAa">
                         {comments ?

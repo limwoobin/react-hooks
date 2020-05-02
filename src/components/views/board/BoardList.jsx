@@ -54,8 +54,8 @@ const BoardList = () => {
     return (
         <div className="table">
             <div className="addBtn">
-                <Link to="/ctg/board/write">
-                    <Button variant="contained" color="primary">추가</Button>
+                <Link to="/ctg/board/write" style={{ textDecoration: 'none' }}>
+                    <button color="teal" className="sc-dnqmqq gzELJz">Add</button>
                 </Link>
             </div>
             <TableContainer component={Paper}>
