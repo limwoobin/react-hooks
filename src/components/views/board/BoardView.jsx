@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import { API } from '../../../api/Call_API';
 import { Func } from '../../../common/common';
 import Comment from '../../views/comment/Comment';
+import CommentWrite from '../../views/comment/CommentWrite';
 import './BoardView.scss';
 
 
@@ -71,17 +72,32 @@ const BoardView = (props) => {
                     <div className="sc-jnlKLf efgoQf">
                         <div className="information">
                             <span className="userEmail">{userEmail}</span>
-                            <span class="separator">·</span>
+                            <span className="separator">·</span>
                             <span>{regDate}</span>
                         </div>
                         <div className="sc-hEsumM dBRwrG">
                             조회수: {views}
                         </div>
                     </div>
-                    <img src="https://media.vlpt.us/images/snoop2head/post/9215b9f1-3c39-4ca0-9ab9-e03a048545f8/running-573762_1920.jpg" alt="post-thumbnail" class="sc-tilXH cAPLHZ" />
+                    <img src="https://media.vlpt.us/images/snoop2head/post/9215b9f1-3c39-4ca0-9ab9-e03a048545f8/running-573762_1920.jpg" alt="post-thumbnail" className="sc-tilXH cAPLHZ" />
                 </div>
             </div>
+            <div className="sc-feJyhm kMGsFz">
+                <div className="sc-cIShpX cnidFS atom-one-light">
+                    <div className="sc-cIShpX cnidFS atom-one-light">
+                        <p>{content}</p>
+                    </div>
+                </div>
+            </div>
+            <div className="sc-kgAjT gXJKuQ sc-iELTvK cGalOa">
+                <h4>N의 댓글</h4>
+                <div className="sc-cmTdod kHxQNt">
+                    <CommentWrite />
+                    <div className="sc-hwwEjo hQpbXX">
 
+                    </div>
+                </div>
+            </div>
             {comments ?
                 renderComments(comments) :
                 '댓글이 없습니다.'

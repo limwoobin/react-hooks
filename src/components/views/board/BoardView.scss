@@ -72,3 +72,54 @@ div {
     display: block;
     margin: 2rem auto 0px;
 }
+
+@media (max-width: 1024px){
+    .kMGsFz {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 5rem auto 0px;
+    }
+}
+
+.fujwZh {
+    font-size: 1.125rem;
+    color: rgb(34, 36, 38);
+    line-height: 1.7;
+    letter-spacing: -0.004em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.cGalOa {
+    margin-top: 3rem;
+    color: rgb(52, 58, 64);
+}
+
+.gXJKuQ {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cGalOa h4 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
