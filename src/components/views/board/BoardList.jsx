@@ -73,8 +73,8 @@ const BoardList = () => {
                                 boards(value.boards) : 
                                 <TableRow>
                                     <TableCell colSpan="4" align="center">
-                                    {/* <CircularProgress className={classes.progress} variant='determinate' value={this.state.completed} /> */}
-                                    게시글이 없습니다.
+                                    <CircularProgress  />
+                                    {/* 게시글이 없습니다. */}
                                     </TableCell>
                                 </TableRow>
                             }
