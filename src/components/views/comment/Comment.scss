@@ -92,3 +92,74 @@ input, button, textarea {
 div {
     display: block;
 }
+
+.iqjCNk {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.gYeJel {
+    margin-bottom: 1.5rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+.fujwZh {
+    font-size: 1.125rem;
+    color: rgb(34, 36, 38);
+    line-height: 1.7;
+    letter-spacing: -0.004em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gYeJel .profile {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gYeJel .profile img {
+    width: 3.375rem;
+    height: 3.375rem;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.gYeJel .profile .comment-info .cNHItw {
+    margin-left: 1rem;
+    line-height: 1;
+}
+
+.gYeJel .profile .comment-info .username {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(52, 58, 64);
+}
+
+.gYeJel .profile .comment-info .date {
+    margin-top: 0.5rem;
+    color: rgb(134, 142, 150);
+    font-size: 0.875rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}

@@ -94,14 +94,15 @@ const BoardView = (props) => {
                 <div className="sc-cmTdod kHxQNt">
                     <CommentWrite />
                     <div className="sc-hwwEjo hQpbXX">
-
+                        <div className="sc-iyvyFf kwHKAa">
+                        {comments ?
+                            renderComments(comments) :
+                            '댓글이 없습니다.'
+                        }
+                        </div>
                     </div>
                 </div>
             </div>
-            {comments ?
-                renderComments(comments) :
-                '댓글이 없습니다.'
-            }
             </Typography>
             </Container>
         </div>

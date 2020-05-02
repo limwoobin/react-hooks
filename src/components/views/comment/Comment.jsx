@@ -20,12 +20,26 @@ const Comment = (props) => {
     }
 
     return (
-        <div>
-            {userEmail} : {content} &nbsp; {Func.DateFormat(modiDate)} <br/>
-            {childComments ? renderChildComments(childComments)
-            : ''}
-            &nbsp;
-            <Divider />
+        <div className="sc-kTUwUJ iqjCNk comment">
+            <div className="sc-dqBHgY gYeJel">
+                <div className="profile">
+                    {/* <a><img src="" alt="comment-user-thumbnail" /></a> */}
+                    <div className="comment-info">
+                        <div className="userEmail">
+                            <a>{userEmail}</a>
+                        </div>
+                        <div className="date">
+                            {Func.DateFormat(modiDate)}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="sc-ktHwxA fujwZh">
+                <div className="sc-gxMtzJ cNHItw">
+                    <p>{content}</p>
+                    <Divider />
+                </div>
+            </div>
         </div>
     )
 }
