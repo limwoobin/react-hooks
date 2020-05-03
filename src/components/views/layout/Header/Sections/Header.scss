@@ -6,16 +6,14 @@
 
 .menu {
   padding: 0 20px;
-  border-bottom: solid 1px #5f4444;
   overflow: auto;
-  box-shadow: 0 0 30px #d1a5a5;
+  box-shadow: 0 0 30px #66FFFF;
   background-color: white;
 }
 
 .menu__logo {
   width: 150px;
   float: left;
-  display: inline-block;
   padding: 20px;
   font-family: "Fira Mono", monospace;
   align-items: center;

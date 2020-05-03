@@ -46,6 +46,16 @@ Link:-webkit-any-link {
     text-decoration: none;
 }
 
+.dxtZdc img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
 .dxtZdc {
     width: 100%;
     position: relative;
@@ -58,7 +68,7 @@ Link:-webkit-any-link {
     flex: 1 1 0%;
 }
 
-h4 {
+h3 {
     display: block;
     margin-block-start: 1.33em;
     margin-block-end: 1.33em;

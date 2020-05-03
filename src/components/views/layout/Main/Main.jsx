@@ -11,6 +11,7 @@ import {
    ,SignUp
    ,test
    ,BoardRouter
+   ,ProfileView
 } 
 from '../../../page/pages';
 
@@ -19,6 +20,7 @@ const Main = () => {
         <div className="mainDiv" style={{backgroundColor: 'white'}}>
             <Switch>
                 <Route exact path="/" component={MainPage} />
+                <Route path="/ctg/profile" component={ProfileView} />
                 <Route path="/ctg/notice" component={Notice} />
                 <Route path="/ctg/think" component={Think} />
                 <Route path="/ctg/board" component={BoardRouter} />

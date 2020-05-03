@@ -3,7 +3,6 @@ import RightMenu from './Sections/RightMenu';
 import { Drawer, Button } from 'antd';
 import './Sections/Header.scss';
 import MenuBtn from '../Menu/Menu';
-const Logo = '';
 
 function Header() {
   const [visible, setVisible] = useState(false)

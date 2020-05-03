@@ -7,3 +7,4 @@ export {default as hooksUseInput} from '../study/hooksUseInput';
 export {default as test} from '../study/test';
 export {default as NoMatch} from '../NoMatch';
 export {default as BoardRouter} from '../views/board/BoardRouter';
+export {default as ProfileView} from '../views/MyProfile/ProfileView';
