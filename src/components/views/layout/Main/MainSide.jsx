@@ -24,9 +24,9 @@ const MainSide = () => {
                             <section className="sc-fAjcbJ fNlsam sc-gisBJw kPSwsK">
                                 <h4>섹스</h4>
                                 <ul>
-                                    <li>현수씨</li>
-                                    <li>보고있으면</li>
-                                    <li>대답해주세요.</li>
+                                    <li>시발</li>
+                                    <li>디자인하기</li>
+                                    <li>개좆같네.</li>
                                 </ul>
                             </section>
                         </div>
