@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route , Switch } from 'react-router-dom';
-import Home from '../../../Home';
+import MainPage from './MainPage';
+import './Main.scss';
 import { 
     Profile
    ,Notice
@@ -16,9 +17,9 @@ from '../../../page/pages';
 
 const Main = () => {
     return (
-        <div style={{backgroundColor: 'white'}}>
+        <div className="mainDiv" style={{backgroundColor: 'white'}}>
             <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={MainPage} />
                 <Route path="/ctg/profile" component={Profile} />    
                 <Route path="/ctg/notice" component={Notice} />
                 <Route path="/ctg/think" component={Think} />
