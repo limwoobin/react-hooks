@@ -22,22 +22,15 @@ function Header() {
         <div className="menu__btn" >
           <MenuBtn />
         </div>
-        <div className="menu__logo">
-          <a href="/">
-            <img src={Logo} alt="Logo" style={{ width: '100%', marginTop: '-5px' }} />
+        <div className="menu__logo" >
+          <a href="/" style={{ textDecoration: 'none' }}>
+            Drogbalog
           </a>
         </div>
         <div className="menu__container">
           <div className="menu_rigth">
             <RightMenu mode="horizontal" />
           </div>
-          <Button
-            className="menu__mobile-button"
-            type="primary"
-            onClick={showDrawer}
-          >
-            AAAA
-          </Button>
           <Drawer
             title="Basic Drawer"
             placement="right"

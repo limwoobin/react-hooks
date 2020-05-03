@@ -50,7 +50,7 @@ const RightMenu = (props) => {
                     </>;
   }
   return (
-      <div>
+      <div className="menu_right">
         {renderSignbtn}
       </div>
   )

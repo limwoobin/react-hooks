@@ -15,12 +15,17 @@
 .menu__logo {
   width: 150px;
   float: left;
-}
+  display: inline-block;
+  padding: 20px;
+  font-family: "Fira Mono", monospace;
+  align-items: center;
+  -webkit-box-align: center;
+} 
 
 .menu__logo a {
-  display: inline-block;
-  font-size: 20px;
-  padding: 19px 20px;
+  color: rgb(33, 37, 41);
+  font-size: 1.35rem;
+  font-weight: bold;
 }
 
 .menu__container .ant-menu-item {
@@ -71,11 +76,6 @@
     display: inline-block !important;
   }
 
-  .menu_left,
-  .menu_rigth {
-    display: none;
-  }
-
   .menu__logo a {
     margin-left: -20px;
   }
@@ -94,4 +94,16 @@
   color: rgb(52, 58, 64);
   font-weight: bold;
   font-size: 1rem;
+}
+
+.menu_right {
+  padding-right: 2rem;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+div {
+  display: block;
 }
