@@ -23,7 +23,7 @@ function Header() {
           <MenuBtn />
         </div>
         <div className="menu__logo" >
-          <a href="/" style={{ textDecoration: 'none' }}>
+          <a href="/" style={{ textDecoration: 'none'}}>
             Drogbalog
           </a>
         </div>

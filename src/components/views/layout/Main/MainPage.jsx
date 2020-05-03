@@ -1,6 +1,7 @@
 import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
+import MyProfile from '../../MyProfile/MyProfile';
 
 const MainPage = () => {
     return (
@@ -8,7 +9,7 @@ const MainPage = () => {
             <div className="sc-jlyJG lpgbkm">
                 <main className="sc-gipzik BAccj">
                     <div className="sc-eqIVtm gLLJLX">
-
+                        <MyProfile />
                     </div>
                 </main>
                 <MainSide />

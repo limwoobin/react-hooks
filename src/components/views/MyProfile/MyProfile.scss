@@ -1,0 +1,26 @@
+div {
+    display: block;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.dvLbCX {
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 4px;
+    transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+.dvLbCX {
+    width: 100%;
+    margin: 0px;
+}
+
