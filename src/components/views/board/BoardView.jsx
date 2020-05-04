@@ -2,11 +2,10 @@ import React , {useState , useEffect} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import Divider from '@material-ui/core/Divider';
 import { API } from '../../../api/Call_API';
 import { Func } from '../../../common/common';
-import Comment from '../../views/comment/Comment';
-import CommentWrite from '../../views/comment/CommentWrite';
+import Comment from '../comment/Comment';
+import CommentWrite from '../comment/CommentWrite';
 import './BoardView.scss';
 
 
