@@ -6,7 +6,7 @@ const MyProfile = () => {
     return (
         <div className="sc-jhAzac dvLbCX">
             <Link to="/ctg/profile" className="sc-hzDkRC ebEzFW">
-            <div style={{ paddingTop: '52.19206680584551%' }}  className="sc-Rmtcm dxtZdc">
+            <div style={{ paddingTop: '52%' }}  className="sc-Rmtcm dxtZdc">
                 <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F246A4A4453D30B822B" />
             </div>
             </Link>
