@@ -25,6 +25,7 @@ const CommentWrite = (props) => {
         };
         API.CommentInsert(JSON.stringify(data))
         .then(res => {
+            console.log(res);
             if(res.data.code !== 'DR00') alert('잠시 후 다시 시도해주세요.')
         }).catch(err => {
             console.log(err);
@@ -37,7 +38,7 @@ const CommentWrite = (props) => {
         <div className="sc-jwKygS zJaCr">
             <textarea placeholder="댓글을 작성하세요" name="content" className="sc-btzYZH BVLvn" onChange={handleValueChange} />
             <div className="buttons-wrapper">
-                <button color="teal" className="sc-dnqmqq gzELJz" onClick={writeComment} >댓글 작성</button>
+                <button color="teal" className="sc-dnqmqq gzELJz" onClick={writeComment}>댓글 작성</button>
             </div>
         </div>
     )
