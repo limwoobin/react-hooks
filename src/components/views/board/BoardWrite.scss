@@ -1,0 +1,54 @@
+.content-editor {
+    overflow-y: scroll;
+    position: absolute;
+    top: 72px;
+    bottom: 66px;
+    left: 0;
+    right: 0;
+}
+
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+div {
+    display: block;
+}
+
+body, button, input, select, td, textarea, th {
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: "Noto Sans DemiLight", AppleSDGothicNeo-Regular, "Malgun Gothic", "맑은 고딕", dotum, 돋움, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.btn-category {
+    display: block;
+    width: 860px;
+    height: 30px;
+    margin: 46px auto 0;
+    position: relative;
+}
+
+.post-title {
+    width: 860px;
+    margin: 18px auto 17px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.post-title .textarea_tit {
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 30px;
+    color: #202020;
+    font-family: Noto Sans DemiLight,AppleSDGothicNeo-Regular,Malgun Gothic,dotum,sans-serif;
+    resize: none;
+    outline: 0 none;
+    line-height: 40px;
+    overflow: hidden;
+    letter-spacing: -.4px;
+}

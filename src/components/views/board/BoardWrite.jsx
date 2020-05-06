@@ -4,9 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import {withStyles} from '@material-ui/core/styles';
-import useInputs from '../../../hooks/useInputs';
+import './BoardWrite.scss';
 
 
 const styles = theme => ({
@@ -50,15 +48,17 @@ const BoardWrite = () => {
         <Typography component="div" style={{ backgroundColor: '#F6F6F6' , minHeight:'100%' , fontSize: '15px' , textAlign: 'left'}}>
             <div>
                 <div>
-                    제목 : <TextField className={styles.textField} label="title"  name="title" variant="outlined" onChange={handleValueChange} /> <br/>
-                    작성자 : {window.sessionStorage.loggedInUserEmail}<br/>
-                    <br /><br />
-                    <Divider />
-                    내용 : <TextField className={styles.textField} label="content" name="content" variant="outlined" onChange={handleValueChange} /> <br/> 
-                    <br /><br />
+                    <div className="content-editor keditor">
+                      <div className="btn-category" role="button">
+                        <div className="mce-widget mce-btn" role="button">
+                          ...
+                        </div>
+                      </div>
+                      <div className="post-title">
+                        <textarea className="textarea_tit" placeholder="제목을 입력하세요" style={{height: '42px'}} />
+                      </div>
+                    </div>
                 </div>
-                <Button variant="contained" color="primary" onClick={handleBoardWrite}>작성</Button> 
-                <Divider />
             </div>
         </Typography>
         </Container>
