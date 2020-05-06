@@ -28,8 +28,7 @@ const FindPasswordForm = () => {
                     <DialogTitle id="form-dialog-title">패스워드 찾기</DialogTitle>
                     <DialogContent>
                     <DialogContentText>
-                        To subscribe to this website, please enter your email address here. We will send updates
-                        occasionally.
+                    To be find your password, please enter your email address here. We will send temporary password.
                     </DialogContentText>
                     <TextField
                         autoFocus
@@ -45,7 +44,7 @@ const FindPasswordForm = () => {
                         Cancel
                     </Button>
                     <Button onClick={handleClose} color="primary">
-                        Subscribe
+                        Send
                     </Button>
                     </DialogActions>
                 </Dialog>

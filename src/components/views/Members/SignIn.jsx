@@ -15,6 +15,7 @@ import CopyRight from '../../common/CopyRight';
 import FindPasswordForm from './FindPasswordForm';
 import { Func } from '../../../common/common';
 import { API } from '../../../api/Call_API';
+import { blue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.secondary.main, 
   },
   form: {
     width: '100%', // Fix IE 11 issue.

@@ -30,20 +30,23 @@ const ProfileView = () => {
                     <div className="sc-cIShpX cnidFS atom-one-light">
                         <p>
                             <h4>
-                                이름 : 임우빈 <br /><br />
-                                영어이름 : Drogba <br /><br />
-                                나이 : 27 <br /><br />
-                                거주지 : 서울 <br /><br />
-                                email : drogbacuty@gmail.com <br /><br />
-                                취미 : 당구(쓰리쿠 200) <br /><br />
-                                직업 : 개발자 <br /><br />
-                                존경하는 사람 : 드록바 <br /><br />
-                                Github : <a href="https://github.com/limwoobin" target="_blank">https://github.com/limwoobin</a><br /><br />
-                                내가 지향하는 방향 : 풀스택을 지향하며 계속 발전하는 개발자가 되고싶은 사람입니다. 계속 발전하는 맛에 살고싶습니다. <br /><br />
-                                내 기술스택 : Node.js , Express , React hooks , Java Script , Java , Spring Boot , mysql , mongodb , redis , network<br /><br />
-                                하고싶은 것 : 영어 공부 , Go , docker , Kubernetes , Type Script 그 외에 현재 알고 있는 지식들을 좀 더 깊숙히... <br /><br />
-                                <br /><br />사이트 기술 스택 <br />
-                                Node.js , React hooks , Express , MongoDB ...<br /><br />
+                                <ul>
+                                <li>이름 : 임우빈</li>
+                                <li>영어이름 : Drogba</li>
+                                <li>나이 : 27</li>
+                                <li>거주지 : 서울</li>
+                                <li>email : drogbacuty@gmail.com</li>
+                                <li>취미 : 당구(3구 200)</li>
+                                <li>직업 : 개발자</li>
+                                <li>존경하는 사람 : 드록바</li>
+                                <li>Github : <a href="https://github.com/limwoobin" target="_blank">https://github.com/limwoobin</a></li>
+                                <li>내가 지향하는 방향 : 풀스택을 지향하며 계속 발전하는 개발자가 되고싶은 사람입니다. 계속 발전하는 맛에 살고싶습니다.</li>
+                                <li>내 기술스택 : Node.js , Express , React hooks , Java Script , Java , Spring Boot , mysql , mongodb , redis , network</li>
+                                <li>하고싶은 것 : 영어 공부 , Go , docker , Kubernetes , Type Script 그 외에 현재 알고 있는 지식들을 좀 더 깊숙히...</li>
+                                <br /><br />
+                                <li>사이트 기술 스택</li>
+                                Node.js , React hooks , Express , MongoDB ...
+                                </ul>
                             </h4>
                         </p>
                     </div>
