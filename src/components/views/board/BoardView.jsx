@@ -18,46 +18,39 @@ const BoardView = (props) => {
         boardType: '',
         title: '',
         content: '',
-        comments: [],
         regDate: '',
     })
 
-    const {_id , id , views , userEmail , boardType , title , content , comments , regDate , image} = value;
+    const [comments , setComments] = useState([]);
+
+    const {_id , id , views , userEmail , boardType , title , content , regDate , image} = value;
 
     useEffect(() => {
-        getBaord();
+        getBoard();
     },[]);
 
-    const getBaord = async () => {
-        try{
-            const getBoardAPI = await API.GET_BoardData(id);
-            const boardData = getBoardAPI.data.data;
-            setValue({
-                ...value,
-                _id : boardData._id,
-                views: boardData.views,
-                userEmail: boardData.userEmail,
-                boardType: boardData.boardType,
-                title: boardData.title,
-                content: boardData.content,
-                regDate: Func.DateFormat(boardData.regDate),
-            })
-            getComments();
-        }catch(err){
-            console.log('서버죽엇음')
-            console.log(err);
-        }
+    const getBoard = async () => {
+        const getBoardAPI = await API.GET_BoardData(id);
+        const boardData = getBoardAPI.data.data;
+        setValue({
+            ...value,
+            _id : boardData._id,
+            views: boardData.views,
+            userEmail: boardData.userEmail,
+            boardType: boardData.boardType,
+            title: boardData.title,
+            content: boardData.content,
+            regDate: Func.DateFormat(boardData.regDate),
+        })
+        getComments();
     }
 
     const getComments = async () => {
         const getCommentsAPI = await API.GET_Comments(id);
-        console.log(getCommentsAPI);
         const commentsData = getCommentsAPI.data.data;
-        setValue({
-            ...value,
-            comments: commentsData
-        })
+        setComments(commentsData);
     }
+    
 
     const renderComments = (data) => {
         return data.map((c) => {
