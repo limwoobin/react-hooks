@@ -16,6 +16,7 @@ import {
 from '../../../page/pages';
 
 const Main = () => {
+    
     return (
         <div className="mainDiv" style={{backgroundColor: 'white'}}>
             <Switch>
