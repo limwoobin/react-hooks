@@ -25,25 +25,39 @@ const BoardView = (props) => {
     const {_id , id , views , userEmail , boardType , title , content , comments , regDate , image} = value;
 
     useEffect(() => {
-        API.GET_BoardData(id)
-        .then(res => {
-            console.log(res.data);
-            const resData = res.data.data;
+        getBaord();
+    },[]);
+
+    const getBaord = async () => {
+        try{
+            const getBoardAPI = await API.GET_BoardData(id);
+            const boardData = getBoardAPI.data.data;
             setValue({
                 ...value,
-                _id : resData._id,
-                views: resData.views,
-                userEmail: resData.userEmail,
-                boardType: resData.boardType,
-                title: resData.title,
-                content: resData.content,
-                comments: resData.comments,
-                regDate: Func.DateFormat(resData.regDate),
+                _id : boardData._id,
+                views: boardData.views,
+                userEmail: boardData.userEmail,
+                boardType: boardData.boardType,
+                title: boardData.title,
+                content: boardData.content,
+                regDate: Func.DateFormat(boardData.regDate),
             })
-        }).catch(err => {
+            getComments();
+        }catch(err){
+            console.log('서버죽엇음')
             console.log(err);
+        }
+    }
+
+    const getComments = async () => {
+        const getCommentsAPI = await API.GET_Comments(id);
+        console.log(getCommentsAPI);
+        const commentsData = getCommentsAPI.data.data;
+        setValue({
+            ...value,
+            comments: commentsData
         })
-    },[]);
+    }
 
     const renderComments = (data) => {
         return data.map((c) => {

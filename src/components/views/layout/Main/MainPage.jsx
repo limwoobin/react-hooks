@@ -2,7 +2,7 @@ import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
-import Sex from '../../../study/hooksUseConfirm';
+import Sex from '../../../study/hooksUseEffect';
 
 
 const MainPage = () => {

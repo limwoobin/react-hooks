@@ -47,13 +47,9 @@ const Menu = () => {
         _GetMenuItems();
     } , []);
 
-    const _GetMenuItems = () => {
-        API.GET_Categories()
-        .then(res => {
-            setMenuItems(res.data.data)
-        }).catch(err => {
-            console.log(err);
-        })    
+    const _GetMenuItems = async () => {
+        const categories = await API.GET_Categories();
+        setMenuItems(categories.data.data);
     }
 
     const openSide = () => (
