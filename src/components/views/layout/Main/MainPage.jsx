@@ -2,7 +2,7 @@ import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
-import Sibal from '../../../study/hooksUseRef';
+import Sibal from '../../../study/hooksUseRef2';
 
 
 const MainPage = () => {

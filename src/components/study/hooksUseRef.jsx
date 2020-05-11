@@ -25,6 +25,7 @@ const hooksUseRef = () => {
         nameInput.current.focus();
       };
 
+    const array = ['a', 'b', 'c', 'd'];
 
 
     return (
@@ -47,6 +48,12 @@ const hooksUseRef = () => {
             <div>
                 <b>값: </b>
                 {name} ({nickname})
+            </div>
+
+            <div>
+                {array.map(c => {
+                     return <div key={c}>{c}</div>
+                })}
             </div>
         </div>
     )
