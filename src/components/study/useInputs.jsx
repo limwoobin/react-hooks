@@ -1,18 +1,28 @@
-import {useReducer} from 'react';
+import React , {useState} from 'react';
 
-const reducer = (state , action) => {
-    return{
-        ...state,
-        [action.name]: action.value
-    };
-}
 
-const useInputs = (initialForm) => {
-    const [state , dispatch] = useReducer(reducer , initialForm);
-    const onChange = e => {
-        dispatch(e.target);
-    };
-    return [state , onChange];
+const useInputs = () => {
+    
+    const [text , setText] = useState('');
+
+    const clean = () => {
+        console.log('clean');
+        setText('');
+    }
+
+    const onChange = (e) => {
+        setText(e.target.value);
+    }
+
+    return(
+        <div>
+            <input onChange={onChange} value={text} />
+            <button onClick={clean}>초기화</button>
+            <div>
+                <b>val: {text}</b>
+            </div>
+        </div>
+    )
 }
 
 export default useInputs;

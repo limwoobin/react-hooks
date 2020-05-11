@@ -2,7 +2,7 @@ import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
-import Sex from '../../../study/hooksUseEffect';
+import Sibal from '../../../study/useInputs';
 
 
 const MainPage = () => {
@@ -12,7 +12,7 @@ const MainPage = () => {
                 <main className="sc-gipzik BAccj">
                     <div className="sc-eqIVtm gLLJLX">
                         {/* <MyProfile /> */}
-                        <Sex />
+                        <Sibal />
                     </div>
                 </main>
                 <MainSide />

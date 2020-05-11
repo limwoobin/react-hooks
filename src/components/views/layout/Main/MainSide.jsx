@@ -22,7 +22,7 @@ const MainSide = () => {
                                 </ul>
                             </section>
                             <section className="sc-fAjcbJ fNlsam sc-gisBJw kPSwsK">
-                                <h4>섹스</h4>
+                                <h4>XX</h4>
                                 <ul>
                                     <li>시발</li>
                                     <li>디자인하기</li>

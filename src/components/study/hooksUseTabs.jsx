@@ -23,14 +23,44 @@ const useTabs = (initialTab , allTabs) => {
     };
 };
 
+const useTest = (a , b) => {
+    const printA = () => {
+        console.log('a');
+    }
+
+    const printB = () => {
+        console.log('b');
+    }
+
+    return {
+        test : printA,
+        zztest : printB
+    }
+}
+
 const hooksUseTabs = () => {
     const {currentItem , changeItem} = useTabs(0 , content);
+    const [count , setCount] = useState(0);
+    const {test , zztest} = useTest(0 , 1);
+
     return(
         <div>
             {content.map((section , index) => {
-                return <button onClick={() => changeItem(index)}>{section.tab}</button>
+                return <button onClick={() => changeItem(index)}>{section.tab}+{index}</button>
             })}
             <div>{currentItem.content}</div>
+
+
+            <div>
+                {count}
+                <button onClick={() => setCount(count + 1)}>+</button>
+            </div>
+
+
+            <div>
+                <button onClick={test}>AAA</button>
+                <button onClick={zztest}>BBB</button>
+            </div>
         </div>
     )
 }
