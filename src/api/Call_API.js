@@ -1,4 +1,13 @@
 import axios from 'axios';
+export default axios.create({
+    baseURL: 'http://localhost:4000',
+    timeout: 2500,
+    header: {
+        Authorization: 'bearer accessKey',
+        'Content-Type': 'application/json'
+    }
+});
+
 
 // const myServer = 'http://localhost:4000'
 
