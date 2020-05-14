@@ -15,6 +15,7 @@ import CopyRight from '../../common/CopyRight';
 import FindPasswordForm from './FindPasswordForm';
 import { Func } from '../../../common/common';
 import { API } from '../../../api/Call_API';
+import RedirectToMain from '../../common/RedirectToMain';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -90,9 +91,7 @@ const SignIn = () => {
 
     return(
       <div>
-        {
-          window.sessionStorage.getItem('isLogin') && <Redirect to="/" />
-        }
+        <RedirectToMain />
         <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>

@@ -15,6 +15,7 @@ import DateForm from '../../common/DateForm';
 import CopyRight from '../../common/CopyRight';
 import { Func } from '../../../common/common';
 import { API } from '../../../api/Call_API';
+import RedirectToMain from '../../common/RedirectToMain';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -137,9 +138,7 @@ const SignUp = () => {
     
     return (
         <div>
-            {
-                window.sessionStorage.getItem('isLogin') && <Redirect to="/" />
-            }
+            <RedirectToMain />
             <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className={classes.paper}>
