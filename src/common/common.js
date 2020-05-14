@@ -35,5 +35,5 @@ export const Func = {
     },
     DateFormat2 : (date) => {
         return moment(date).format('YYYY-MM-DD');
-    }
+    },
 }

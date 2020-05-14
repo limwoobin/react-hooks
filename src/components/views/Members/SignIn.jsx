@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Link } from 'react-router-dom';
+import { Link , Redirect} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -15,7 +15,6 @@ import CopyRight from '../../common/CopyRight';
 import FindPasswordForm from './FindPasswordForm';
 import { Func } from '../../../common/common';
 import { API } from '../../../api/Call_API';
-import { blue } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -90,6 +89,10 @@ const SignIn = () => {
     }
 
     return(
+      <div>
+        {
+          window.sessionStorage.getItem('isLogin') && <Redirect to="/" />
+        }
         <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
@@ -150,6 +153,7 @@ const SignIn = () => {
         </div>
         <CopyRight />
       </Container>
+      </div>
     )
 }
 

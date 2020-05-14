@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Link } from 'react-router-dom';
+import { Link  , Redirect } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
@@ -136,106 +136,111 @@ const SignUp = () => {
     }
     
     return (
-        <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className={classes.paper}>
-            <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">
-            회원가입
-            </Typography>
-            <form className={classes.form} noValidate>
-            <Grid container spacing={2}>
-                <Grid item xs={12}>
-                <TextField
-                    variant="outlined"
-                    required
+        <div>
+            {
+                window.sessionStorage.getItem('isLogin') && <Redirect to="/" />
+            }
+            <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <div className={classes.paper}>
+                <Avatar className={classes.avatar}>
+                <LockOutlinedIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                회원가입
+                </Typography>
+                <form className={classes.form} noValidate>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        label="name"
+                        name="userNm"
+                        onChange={handleValueChange}
+                        value={userNm}
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        label="Email Address"
+                        name="userEmail"
+                        onChange={handleValueChange}
+                        value={userEmail}
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        name="password"
+                        label="Password"
+                        type="password"
+                        onChange={handleValueChange}
+                        value={password}
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        name="password2"
+                        label="Password Check"
+                        type="password"
+                        onChange={handleValueChange}
+                        value={password2}
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        required
+                        fullWidth
+                        name="userPhone"
+                        label="Phone number( - 없이 입력해주세요.)"
+                        type="userPhone"
+                        onChange={onlyNumberChange}
+                        value={userPhone}
+                    />
+                    </Grid>
+                    <Grid item xs={12}>
+                    <DateForm callBackDate={BirthdayCallback}/>
+                    </Grid>
+                    <Grid item xs={12}>
+                    <FormControlLabel
+                        control={<Checkbox color="primary" value={accept} onClick={toggleCheckbox}/>}
+                        label="I want to receive inspiration, marketing promotions and updates via email."
+                        name="accept"
+                    />
+                    </Grid>
+                </Grid>
+                <Button
                     fullWidth
-                    label="name"
-                    name="userNm"
-                    onChange={handleValueChange}
-                    value={userNm}
-                />
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                    onClick={SignUpSubmit}
+                >
+                    Sign Up
+                </Button>
+                <Grid container justify="flex-end">
+                    <Grid item>
+                    <Link to="/login" variant="body2">
+                        Already have an account? Sign in
+                    </Link>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    label="Email Address"
-                    name="userEmail"
-                    onChange={handleValueChange}
-                    value={userEmail}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    name="password"
-                    label="Password"
-                    type="password"
-                    onChange={handleValueChange}
-                    value={password}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    name="password2"
-                    label="Password Check"
-                    type="password"
-                    onChange={handleValueChange}
-                    value={password2}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                <TextField
-                    variant="outlined"
-                    required
-                    fullWidth
-                    name="userPhone"
-                    label="Phone number( - 없이 입력해주세요.)"
-                    type="userPhone"
-                    onChange={onlyNumberChange}
-                    value={userPhone}
-                />
-                </Grid>
-                <Grid item xs={12}>
-                <DateForm callBackDate={BirthdayCallback}/>
-                </Grid>
-                <Grid item xs={12}>
-                <FormControlLabel
-                    control={<Checkbox color="primary" value={accept} onClick={toggleCheckbox}/>}
-                    label="I want to receive inspiration, marketing promotions and updates via email."
-                    name="accept"
-                />
-                </Grid>
-            </Grid>
-            <Button
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-                onClick={SignUpSubmit}
-            >
-                Sign Up
-            </Button>
-            <Grid container justify="flex-end">
-                <Grid item>
-                <Link to="/login" variant="body2">
-                    Already have an account? Sign in
-                </Link>
-                </Grid>
-            </Grid>
-            </form>
+                </form>
+            </div>
+            <CopyRight />
+            </Container>
         </div>
-        <CopyRight />
-        </Container>
     )
 }
 
