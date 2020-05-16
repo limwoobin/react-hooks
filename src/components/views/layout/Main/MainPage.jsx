@@ -11,8 +11,8 @@ const MainPage = () => {
             <div className="sc-jlyJG lpgbkm">
                 <main className="sc-gipzik BAccj">
                     <div className="sc-eqIVtm gLLJLX">
-                        {/* <MyProfile /> */}
-                        <Sibal />
+                        <MyProfile />
+                        {/* <Sibal /> */}
                     </div>
                 </main>
                 <MainSide />

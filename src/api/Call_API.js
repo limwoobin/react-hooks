@@ -25,6 +25,7 @@ const url = {
     BoardInsert     : '/dr/board/write',
     CommentInsert   : '/dr/comment/write',
     GET_Comments    : '/dr/comment/list/',
+    FindforPassword : '/dr/mail/password/find/',
 }
 
 const config = {
@@ -47,4 +48,5 @@ export const API = {
     BoardInsert         : (data) => axios.post(url.BoardInsert , data , config),
     CommentInsert       : (data) => axios.post(url.CommentInsert , data , config),
     GET_Comments        : (data) => axios.get(url.GET_Comments + data , config),
+    FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
 }
