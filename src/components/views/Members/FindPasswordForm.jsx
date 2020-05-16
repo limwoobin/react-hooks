@@ -85,7 +85,6 @@ const FindPasswordForm = () => {
                             </Button>
                             </div>
                 }
-              
                 </DialogActions>
             </Dialog>
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
-import Sibal from '../../../study/hooksUseRef2';
+import Sibal from '../../../study/customhooks';
 
 
 const MainPage = () => {
@@ -11,8 +11,8 @@ const MainPage = () => {
             <div className="sc-jlyJG lpgbkm">
                 <main className="sc-gipzik BAccj">
                     <div className="sc-eqIVtm gLLJLX">
-                        <MyProfile />
-                        {/* <Sibal /> */}
+                        {/* <MyProfile /> */}
+                        <Sibal />
                     </div>
                 </main>
                 <MainSide />
