@@ -7,11 +7,14 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import {API} from '../../../api/Call_API';
+
 
 const FindPasswordForm = () => {
     const [open , setOpen] = useState(false);
     const [toEmail , setToEmail] = useState('');
+    const [load , setLoad] = useState(false);
     const handleClickOpen = () => {
         setOpen(true);
       };
@@ -21,11 +24,13 @@ const FindPasswordForm = () => {
       };
 
       const sendMail = () => {
+        setLoad(true);
         API.FindforPassword(toEmail)
         .then(res => {
             console.log(res);
             alert('임시 패스워드를 보내드렸습니다. 메일을 확인해주세요.');
             setOpen(false);
+            setLoad(false);
         }).catch(err => {
             console.log(err);
             alert('메일전송에 실패했습니다. 잠시후 다시 시도해주세요.');
@@ -43,11 +48,12 @@ const FindPasswordForm = () => {
                 Forgot password?
             </Link>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title">패스워드 찾기</DialogTitle>
+                <DialogTitle id="form-dialog-title">임시 패스워드 전송</DialogTitle>
                 <DialogContent>
                 <DialogContentText>
                 To be find your password, please enter your email address here. We will send temporary password.
                 </DialogContentText>
+                {load && <div align="center"><CircularProgress /></div>}
                 <TextField
                     autoFocus
                     margin="dense"
@@ -59,12 +65,27 @@ const FindPasswordForm = () => {
                 />
                 </DialogContent>
                 <DialogActions>
-                <Button onClick={handleClose} color="primary">
-                    Cancel
-                </Button>
-                <Button onClick={sendMail} color="primary">
-                    Send
-                </Button>
+                {
+                    load ?  
+                            <div>
+                            <Button onClick={handleClose} color="primary" disabled>
+                                Cancel
+                            </Button>
+                            <Button onClick={sendMail} color="primary" disabled>
+                                Send
+                            </Button> 
+                            </div>
+                        :
+                            <div>
+                            <Button onClick={handleClose} color="primary">
+                                Cancel
+                            </Button>
+                            <Button onClick={sendMail} color="primary">
+                                Send
+                            </Button>
+                            </div>
+                }
+              
                 </DialogActions>
             </Dialog>
         </div>
