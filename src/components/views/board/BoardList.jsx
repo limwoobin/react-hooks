@@ -68,14 +68,14 @@ const BoardList = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {value.boards.length !== 0 ?
-                                boards(value.boards) : 
-                                <TableRow>
-                                    <TableCell colSpan="4" align="center">
-                                    <CircularProgress  />
-                                    {/* 게시글이 없습니다. */}
-                                    </TableCell>
-                                </TableRow>
+                            {value.boards.length !== 0 
+                                ? boards(value.boards) 
+                                : <TableRow>
+                                     <TableCell colSpan="4" align="center">
+                                     <CircularProgress  />
+                                     {/* 게시글이 없습니다. */}
+                                     </TableCell>
+                                  </TableRow>
                             }
                         </TableBody>
                     </Table>    

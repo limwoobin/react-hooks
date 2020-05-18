@@ -20,12 +20,13 @@ const url = {
     USER_EMAIL_CHK  : '/dr/member/overlap/check/',
     GET_Categories  : '/dr/category/list',
     GET_MainPage    : '/',
-    GET_BoardList   : '/dr/board/list',
+    GET_BoardList   : '/dr/board/list/01',
     GET_BoardData   : '/dr/board/view/',
     BoardInsert     : '/dr/board/write',
     CommentInsert   : '/dr/comment/write',
     GET_Comments    : '/dr/comment/list/',
     FindforPassword : '/dr/mail/password/find/',
+    getNoticeTitle  : '/dr/board/notice',
 }
 
 const config = {
@@ -49,4 +50,5 @@ export const API = {
     CommentInsert       : (data) => axios.post(url.CommentInsert , data , config),
     GET_Comments        : (data) => axios.get(url.GET_Comments + data , config),
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
+    Get_NoticeTitle     : () => axios.get(url.getNoticeTitle , config),
 }

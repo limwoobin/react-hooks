@@ -1,13 +1,32 @@
-import React from 'react';
+import React , {useState , useEffect} from 'react';
+import '../MainPage.scss';
+import {API} from '../../../../../api/Call_API';
+import {Link} from 'react-router-dom';
 
 const NoticePost = () => {
+    const [noticeTitle , setNoticeTitle] = useState([]);
+    useEffect(() => {
+         API.Get_NoticeTitle()
+         .then(res => {
+            setNoticeTitle(res.data.data);
+         }).catch(err => {
+            console.log(err);
+         })
+    })
+
+    const renderNoticetitle = noticeTitle.map((c) => {
+        <Link to={`/ctg/notice/id/${_id}`}>
+            <li>{c.title}</li>
+        </Link>
+    })
+
     return (
         <section className="sc-fAjcbJ fNlsam sc-caSCKo wDGYV">
             <h4>공지사항</h4>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
+                {noticeTitle.length === 0 
+                    ? <h3>공지사항이 없습니다.</h3>
+                    : renderNoticetitle}
             </ul>
         </section>
     )
