@@ -26,16 +26,34 @@ const useStyles = makeStyles({
 const menuList = (menuItems) => {
     return <div>
                 <List>
-                    {menuItems.sort(Func.Compare('id')).map((c) => (
-                        <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem" style={{ textDecoration: 'none'}}>
-                            <ListItem button key={c.name}>
-                                <ListItemText primary={c.name} className="menuItem" />
-                            </ListItem>
-                         </Link>
-                    ))}
+                    {menuItems.sort(Func.Compare('id')).map((c) => {
+                        if(c.type !== 'post') {
+                            return <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem" style={{ textDecoration: 'none'}}>
+                                        <ListItem button key={c.name}>
+                                            <ListItemText primary={c.name} className="menuItem" />
+                                        </ListItem>
+                                    </Link>
+                        }
+                    })}
                 </List>
                 <Divider />
             </div>
+}
+
+const postList = (menuItems) => {
+    return <div>
+                <List>
+                    {menuItems.sort(Func.Compare('id')).map((c) => {
+                        if(c.type === 'post') {
+                            return <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem" style={{ textDecoration: 'none'}}>
+                                        <ListItem button key={c.name}>
+                                            <ListItemText primary={c.name} className="menuItem" />
+                                        </ListItem>
+                                   </Link>
+                        }
+                    })}
+                </List>
+           </div>
 }
 
 const Menu = () => {
@@ -60,6 +78,7 @@ const Menu = () => {
           className={clsx(classes.list)}
         >
           {menuList(menuItems)}
+          {postList(menuItems)}
         </div>
       );
 

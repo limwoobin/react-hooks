@@ -27,7 +27,7 @@ const url = {
     GET_Comments        : '/dr/comment/list/',
     FindforPassword     : '/dr/mail/password/find/',
     GET_RecentNotice    : '/dr/board/recent/notice',
-    GET_RecentPost       : '/dr/post/recent/list',
+    GET_RecentPost      : '/dr/post/recent/list',
 }
 
 const config = {

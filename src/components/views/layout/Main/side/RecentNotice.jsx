@@ -3,6 +3,10 @@ import '../MainPage.scss';
 import {API} from '../../../../../api/Call_API';
 import {Link} from 'react-router-dom';
 
+// const renderNoticeTitle2 = () => {
+//     console.log('asdasd');
+// }
+
 const NoticePost = () => {
     const [noticeTitle , setNoticeTitle] = useState([]);
     useEffect(() => {
@@ -19,7 +23,6 @@ const NoticePost = () => {
             <li>{c.title}</li>
         </Link>
     })
-    
 
     return (
         <section className="sc-fAjcbJ fNlsam sc-caSCKo wDGYV">
