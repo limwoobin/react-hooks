@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const NoticePost = () => {
     const [noticeTitle , setNoticeTitle] = useState([]);
     useEffect(() => {
-         API.Get_NoticeTitle()
+         API.Get_RecentNotice()
          .then(res => {
             setNoticeTitle(res.data.data);
          }).catch(err => {
@@ -14,11 +14,12 @@ const NoticePost = () => {
          })
     })
 
-    const renderNoticetitle = noticeTitle.map((c) => {
+    const renderNoticeTitle = noticeTitle.map((c) => {
         <Link to={`/ctg/notice/id/${_id}`}>
             <li>{c.title}</li>
         </Link>
     })
+    
 
     return (
         <section className="sc-fAjcbJ fNlsam sc-caSCKo wDGYV">
@@ -26,7 +27,7 @@ const NoticePost = () => {
             <ul>
                 {noticeTitle.length === 0 
                     ? <h3>공지사항이 없습니다.</h3>
-                    : renderNoticetitle}
+                    : renderNoticeTitle}
             </ul>
         </section>
     )

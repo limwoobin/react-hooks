@@ -12,21 +12,22 @@ export default axios.create({
 // const myServer = 'http://localhost:4000'
 
 const url = {
-    GET_Customers   : '/dr/customer/customers',
-    ADD_Customer    : '/dr/customer/insert',
-    ADD_Member      : '/dr/member/insert',
-    LOGIN           : '/dr/member/login',
-    LOGOUT          : '/dr/member/logout',
-    USER_EMAIL_CHK  : '/dr/member/overlap/check/',
-    GET_Categories  : '/dr/category/list',
-    GET_MainPage    : '/',
-    GET_BoardList   : '/dr/board/list/01',
-    GET_BoardData   : '/dr/board/view/',
-    BoardInsert     : '/dr/board/write',
-    CommentInsert   : '/dr/comment/write',
-    GET_Comments    : '/dr/comment/list/',
-    FindforPassword : '/dr/mail/password/find/',
-    getNoticeTitle  : '/dr/board/notice',
+    GET_Customers       : '/dr/customer/customers',
+    ADD_Customer        : '/dr/customer/insert',
+    ADD_Member          : '/dr/member/insert',
+    LOGIN               : '/dr/member/login',
+    LOGOUT              : '/dr/member/logout',
+    USER_EMAIL_CHK      : '/dr/member/overlap/check/',
+    GET_Categories      : '/dr/category/list',
+    GET_MainPage        : '/',
+    GET_BoardList       : '/dr/board/list/board',
+    GET_BoardData       : '/dr/board/view/',
+    BoardInsert         : '/dr/board/write',
+    CommentInsert       : '/dr/comment/write',
+    GET_Comments        : '/dr/comment/list/',
+    FindforPassword     : '/dr/mail/password/find/',
+    GET_RecentNotice    : '/dr/board/recent/notice',
+    GET_RecentPost       : '/dr/post/recent/list',
 }
 
 const config = {
@@ -50,5 +51,6 @@ export const API = {
     CommentInsert       : (data) => axios.post(url.CommentInsert , data , config),
     GET_Comments        : (data) => axios.get(url.GET_Comments + data , config),
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
-    Get_NoticeTitle     : () => axios.get(url.getNoticeTitle , config),
+    Get_RecentNotice    : () => axios.get(url.GET_NoticeTitle , config),
+    Get_RecentPost      : () => axios.get(url.GET_RecentPost , config),
 }

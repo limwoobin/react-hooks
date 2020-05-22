@@ -1,7 +1,7 @@
 import React , { useEffect } from 'react';
 import './MainPage.scss';
-import RecentBoard from './side/RecentPost';
-import NoticePost from './side/NoticePost';
+import RecentPost from './side/RecentPost';
+import RecentNotice from './side/RecentNotice';
 import XX from './side/XX';
 
 const MainSide = () => {
@@ -10,8 +10,8 @@ const MainSide = () => {
             <aside className="sc-csuQGl pDRpR">
                     <div className="sc-cHGsZl bHiaRe">
                         <div className="sc-TOsTZ eyrfCG">
-                            <NoticePost />
-                            <RecentBoard />
+                            <RecentNotice />
+                            <RecentPost />
                             <XX />
                         </div>
                     </div>
