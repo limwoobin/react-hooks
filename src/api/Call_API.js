@@ -28,6 +28,7 @@ const url = {
     FindforPassword     : '/dr/mail/password/find/',
     GET_RecentNotice    : '/dr/board/recent/notice',
     GET_RecentPost      : '/dr/post/recent/list',
+    Get_Posts           : '/dr/post/list/',
 }
 
 const config = {
@@ -53,4 +54,5 @@ export const API = {
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
     Get_RecentNotice    : () => axios.get(url.GET_NoticeTitle , config),
     Get_RecentPost      : () => axios.get(url.GET_RecentPost , config),
+    Get_Posts           : () => axios.get(url.Get_Posts + data , config),
 }
