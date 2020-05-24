@@ -1,9 +1,13 @@
-import React from 'react';
+import React , { useState , useEffect } from 'react';
 
-const Posts = () => {
+const Posts = (props) => {
+    const postKeyword = props.match.params.postKeyword;
+    useEffect(() => {
+        
+    } , []);
     return (
         <div>
-            Posts
+            {postKeyword}
         </div>
     )
 }
