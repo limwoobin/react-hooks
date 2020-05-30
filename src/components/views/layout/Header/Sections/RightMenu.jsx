@@ -41,7 +41,7 @@ const RightMenu = (props) => {
     renderSignbtn = <>
                       <Menu mode={props.mode}>
                         <Menu.Item key="login">
-                          <Link to="/login" className="link-router" style={{ textDecoration: 'none' }}>Signin</Link>
+                          <Link to="/member" className="link-router" style={{ textDecoration: 'none' }}>Signin</Link>
                         </Menu.Item>
                         <Menu.Item key="app">
                           <Link to="/register" className="link-router" style={{ textDecoration: 'none' }}>SignUp</Link>
