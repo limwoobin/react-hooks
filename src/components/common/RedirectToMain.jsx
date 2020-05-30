@@ -2,7 +2,6 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 const RedirectToMain = () => {
-
     return(
         <>
             {
@@ -11,6 +10,5 @@ const RedirectToMain = () => {
         </>
     )
 }
-
 
 export default RedirectToMain;

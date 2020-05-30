@@ -54,5 +54,5 @@ export const API = {
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
     Get_RecentNotice    : () => axios.get(url.GET_NoticeTitle , config),
     Get_RecentPost      : () => axios.get(url.GET_RecentPost , config),
-    Get_Posts           : () => axios.get(url.Get_Posts + data , config),
+    Get_Posts           : (data) => axios.get(url.Get_Posts + data , config),
 }

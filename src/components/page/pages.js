@@ -9,3 +9,4 @@ export {default as NoMatch} from '../NoMatch';
 export {default as BoardRouter} from '../views/Board/BoardRouter';
 export {default as ProfileView} from '../views/MyProfile/ProfileView';
 export {default as PostRouter} from '../views/Post/PostRouter';
+export {default as Member} from '../views/Members/Member';

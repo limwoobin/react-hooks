@@ -13,10 +13,6 @@ const renderPost = (posts) => {
         })
 };
 
-const redner = () => {
-    return 'aaasdasd';
-}
-
 const Posts = (props) => {
     const postKeyword = props.match.params.postKeyword;
     const [posts , setPosts] = useState([]);
@@ -24,6 +20,7 @@ const Posts = (props) => {
     useEffect(() => {
         API.Get_Posts(postKeyword)
         .then(res => {
+            console.log(res);
             if(res.data.code === 'DR00') setPosts(res.data.data);
         }).catch(err => {
             console.log(err);

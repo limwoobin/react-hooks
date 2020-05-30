@@ -13,6 +13,7 @@ import {
    ,BoardRouter
    ,ProfileView
    ,PostRouter
+   ,Member
 } 
 from '../../../page/pages';
 
@@ -27,6 +28,7 @@ const Main = () => {
                 <Route path="/ctg/think" component={Think} />
                 <Route path="/ctg/board" component={BoardRouter} />
                 <Route path="/ctg/map" component={Map} />
+                <Route path="/member" component={Member} />
                 <Route path="/ctg/posts" component={PostRouter} />
                 <Route path="/login" component={SignIn} />
                 <Route path="/register" component={SignUp} />
