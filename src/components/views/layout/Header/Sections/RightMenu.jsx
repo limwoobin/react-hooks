@@ -28,7 +28,7 @@ const RightMenu = (props) => {
                     <>
                       <Menu mode={props.mode}>
                       <Menu.Item key="user">
-                        <Link to="/member" className="link-router" style={{ textDecoration: 'none' }}>
+                        <Link to="/login" className="link-router" style={{ textDecoration: 'none' }}>
                           [{loggedInUserEmail}]
                         </Link>
                         </Menu.Item>

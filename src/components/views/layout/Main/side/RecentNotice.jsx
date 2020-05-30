@@ -3,35 +3,37 @@ import '../MainPage.scss';
 import {API} from '../../../../../api/Call_API';
 import {Link} from 'react-router-dom';
 
-// const renderNoticeTitle2 = () => {
-//     console.log('asdasd');
-// }
+
+const RenderNoticeTitle = (notices) => {
+    return <div>
+            {notices.map((c) => {
+                return <Link to={`/ctg/notice/id/${c._id}`} style={{ textDecoration: 'none' }}>
+                            <li>{c.title}</li>
+                        </Link>
+            })} 
+           </div>
+}
 
 const NoticePost = () => {
     const [noticeTitle , setNoticeTitle] = useState([]);
     useEffect(() => {
          API.Get_RecentNotice()
          .then(res => {
+             console.log(res);
             setNoticeTitle(res.data.data);
          }).catch(err => {
             console.log(err);
          })
-    })
-
-    const renderNoticeTitle = noticeTitle.map((c) => {
-        <Link to={`/ctg/notice/id/${_id}`}>
-            <li>{c.title}</li>
-        </Link>
-    })
+    } , []);
 
     return (
         <section className="sc-fAjcbJ fNlsam sc-caSCKo wDGYV">
             <h4>공지사항</h4>
-            <ul>
+            <ol>
                 {noticeTitle.length === 0 
                     ? <h3>공지사항이 없습니다.</h3>
-                    : renderNoticeTitle}
-            </ul>
+                    : RenderNoticeTitle(noticeTitle)}
+            </ol>
         </section>
     )
 }

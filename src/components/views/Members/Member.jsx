@@ -10,7 +10,7 @@ const Member = () => {
     });
 
     return (
-        <div id="cMain">
+        <div id="myPage">
             {/* <RedirectToLogin /> */}
             <MyPageSideBar />
             <MyPage />

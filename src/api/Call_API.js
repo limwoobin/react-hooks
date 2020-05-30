@@ -52,7 +52,7 @@ export const API = {
     CommentInsert       : (data) => axios.post(url.CommentInsert , data , config),
     GET_Comments        : (data) => axios.get(url.GET_Comments + data , config),
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
-    Get_RecentNotice    : () => axios.get(url.GET_NoticeTitle , config),
+    Get_RecentNotice    : () => axios.get(url.GET_RecentNotice , config),
     Get_RecentPost      : () => axios.get(url.GET_RecentPost , config),
     Get_Posts           : (data) => axios.get(url.Get_Posts + data , config),
 }
