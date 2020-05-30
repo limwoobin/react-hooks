@@ -1,0 +1,238 @@
+#cMain {
+    position: relative;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 120px 0 100px;
+}
+
+body, th, td, input, select, textarea, button {
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: "Noto Sans DemiLight",AppleSDGothicNeo,"돋움",dotum,sans-serif;
+    color: #333;
+    letter-spacing: -0.5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#mFeature {
+    float: left;
+    width: 216px;
+}
+
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.aside_profile {
+    border: 1px solid #e0e5ee;
+}
+
+.aside_profile .wrap_thumb {
+    height: 100px;
+    padding: 30px 0 25px;
+    text-align: center;
+    background: #fff;
+    background-size: 100px 100px;
+}
+
+.wrap_thumb {
+    position: relative;
+}
+
+.aside_profile .wrap_thumb a {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.aside_profile .wrap_thumb .thumb_img {
+    border-radius: 100px;
+}
+
+.wrap_thumb .thumb_img {
+    vertical-align: top;
+}
+
+fieldset, img {
+    border: 0 none;
+}
+
+
+.aside_profile .wrap_cont {
+    padding: 0 19px 25px;
+    border-top: 0;
+    border-radius: 0 0 2px 2px;
+    text-align: center;
+    background: #fff;
+}
+
+.aside_profile .wrap_cont .tit_profile {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 3em;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.aside_profile .wrap_cont .txt_ellip {
+    color: #888;
+}
+
+.txt_ellip {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.aside_menu {
+    margin-top: 6px;
+    padding-bottom: 7px;
+    border: 1px solid #e0e5ee;
+    background: #fff;
+}
+
+.aside_menu .on {
+    color: #f54;
+}
+
+.aside_menu .tit_line {
+    padding: 0;
+    border-bottom: 1px solid #f1f3f6;
+}
+
+.aside_menu .tit_menu {
+    display: block;
+    position: relative;
+    min-height: 28px;
+    padding: 12px 0 0 47px;
+    font-family: "Noto Sans Regular",AppleSDGothicNeo,"돋움",dotum,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+}
+
+.aside_menu>div {
+    border-bottom: 1px solid #f1f3f6;
+}
+
+.aside_menu .tit_menu {
+    display: block;
+    position: relative;
+    min-height: 28px;
+    padding: 12px 0 0 47px;
+    font-family: "Noto Sans Regular",AppleSDGothicNeo,"돋움",dotum,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+}
+
+.aside_menu .tit_menu .ico_account {
+    background-position: -20px -160px;
+}
+
+.aside_menu .tit_menu .ico_member {
+    position: absolute;
+    top: 16px;
+    left: 19px;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx){
+    .ico_member {
+        background-image: url(https://t1.daumcdn.net/tistory_admin/static/manage/images/r2/ico_member_190315.png);
+        background-size: 240px 220px;
+    }
+}
+
+.ico_member {
+    display: inline-block;
+    overflow: hidden;
+    background: url(https://t1.daumcdn.net/tistory_admin/static/manage/images/r1/ico_member_190315.png) no-repeat;
+    vertical-align: top;
+    text-indent: -9999px;
+}
+
+.aside_menu .list_menu {
+    padding-bottom: 14px;
+}
+
+.aside_menu .list_menu {
+    padding-bottom: 14px;
+}
+
+ul {
+    display: block;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.aside_menu .link_menu {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 12px;
+    font-size: 13px;
+    color: #555;
+    text-decoration: none;
+    outline: 0px;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}

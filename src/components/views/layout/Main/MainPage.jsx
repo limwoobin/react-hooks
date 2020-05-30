@@ -2,7 +2,6 @@ import React from 'react';
 import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
-import Sibal from '../../../study/RefTest';
 
 
 const MainPage = () => {
@@ -12,7 +11,6 @@ const MainPage = () => {
                 <main className="sc-gipzik BAccj">
                     <div className="sc-eqIVtm gLLJLX">
                         <MyProfile />
-                        {/* <Sibal /> */}
                     </div>
                 </main>
                 <MainSide />
