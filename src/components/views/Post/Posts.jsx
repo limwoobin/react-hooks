@@ -5,7 +5,6 @@ import {Func} from '../../../common/common';
 import './scss/Posts.scss';
 
 const renderPost = (posts) => {
-    console.log(posts);
     return posts 
         ? '게시된 포스트가 없습니다.'
         : posts.map(c => {
@@ -14,9 +13,10 @@ const renderPost = (posts) => {
 };
 
 const Posts = (props) => {
+    console.log(props);
     const postKeyword = props.match.params.postKeyword;
     const [posts , setPosts] = useState([]);
-
+    
     useEffect(() => {
         API.Get_Posts(postKeyword)
         .then(res => {

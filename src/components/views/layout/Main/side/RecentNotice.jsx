@@ -7,14 +7,14 @@ import {Link} from 'react-router-dom';
 const RenderNoticeTitle = (notices) => {
     return <div>
             {notices.map((c) => {
-                return  <Link to={`/ctg/notice/id/${c._id}`} style={{ textDecoration: 'none' }}>
+                return  <Link to={`/ctg/notice/id/${c._id}`} key={c._id} style={{ textDecoration: 'none' }}>
                             <h3><li><p>{c.title}</p></li></h3>
                         </Link>
             })} 
            </div>
 }
 
-const NoticePost = () => {
+const RecentNotice = () => {
     const [noticeTitle , setNoticeTitle] = useState([]);
     useEffect(() => {
          API.Get_RecentNotice()
@@ -38,4 +38,4 @@ const NoticePost = () => {
     )
 }
 
-export default NoticePost;
+export default RecentNotice;
