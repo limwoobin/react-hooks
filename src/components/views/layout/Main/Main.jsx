@@ -24,7 +24,7 @@ const Main = () => {
             <Switch>
                 <Route exact path="/" component={MainPage} />
                 <Route path="/ctg/profile" component={ProfileView} />
-                <Route path="/ctg/notice" component={Notice} />
+                <Route path="/ctg/notice" component={Notice} routerName="notice"/>
                 <Route path="/ctg/think" component={Think} />
                 <Route path="/ctg/board" component={BoardRouter} />
                 <Route path="/ctg/map" component={Map} />

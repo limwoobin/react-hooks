@@ -1,4 +1,4 @@
-export {default as Notice} from '../views/MenuPage/Notice'; 
+export {default as Notice} from '../views/Notice/Notice'; 
 export {default as Map} from '../views/MenuPage/Map'; 
 export {default as Think} from '../views/MenuPage/Think';
 export {default as SignIn} from '../views/Members/SignIn';

@@ -4,7 +4,8 @@ import BoardList from './BoardList';
 import BoardView from './BoardView';
 import BoardWrite from './BoardWrite';
 
-const BoardRouter = ({match , location}) => {
+const BoardRouter = ({match}) => {
+    
     return (
         <div>
             <Route exact path={match.path} component={BoardList} />

@@ -13,15 +13,14 @@ import { API } from '../../../api/Call_API';
 import './Board.scss';
 
 
-const BoardList = () => {
+const BoardList = (props) => {
     const [value , setValue] = useState({
         boards: [],
         completed: 0
     });
 
-
     useEffect(() => {
-        API.GET_BoardList()
+        API.GET_BoardList('board')
         .then(res => {
             console.log(res.data.data);
             setValue({
