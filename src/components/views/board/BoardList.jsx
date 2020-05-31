@@ -13,6 +13,25 @@ import { API } from '../../../api/Call_API';
 import './Board.scss';
 
 
+const boards = (data) => {
+    return <>
+              {data.map((c) => {
+                  return <Board
+                            key={c._id}
+                            _id={c._id}
+                            boardId={c.boardId}
+                            userEmail={c.userEmail} 
+                            boardType={c.boardType} 
+                            title={c.title}
+                            content={c.content}
+                            regDate={c.regDate}
+                            views={c.views}
+                            image={c.image}
+                        />
+              })}
+           </> 
+}
+
 const BoardList = (props) => {
     const [value , setValue] = useState({
         boards: [],
@@ -31,23 +50,6 @@ const BoardList = (props) => {
             console.log(err);
         })
     }, []);
-
-    const boards = (data) => {
-        return data.map((c) => {
-            return <Board
-                            key={c._id}
-                            _id={c._id}
-                            boardId={c.boardId}
-                            userEmail={c.userEmail} 
-                            boardType={c.boardType} 
-                            title={c.title}
-                            content={c.content}
-                            regDate={c.regDate}
-                            views={c.views}
-                            image={c.image}
-                        />
-        })
-    }
 
     return (
         <div className="table">

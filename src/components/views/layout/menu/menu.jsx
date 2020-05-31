@@ -28,7 +28,7 @@ const menuList = (menuItems) => {
                 <List>
                     {menuItems.sort(Func.Compare('id')).map((c) => {
                         if(c.type !== 'post') {
-                            return <Link to={`/ctg/${c.routerName}`} key={c.id} routerName={c.routerName} className="listItem" style={{ textDecoration: 'none'}}>
+                            return <Link to={`/ctg/${c.routerName}`} key={c.id} className="listItem" style={{ textDecoration: 'none'}}>
                                         <ListItem button key={c.name}>
                                             <ListItemText primary={c.name} className="menuItem" />
                                         </ListItem>
