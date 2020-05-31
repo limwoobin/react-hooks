@@ -143,3 +143,15 @@ li {
     padding-left: 0px;
     list-style: none;
 }
+
+p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    color: rgb(73, 80, 87);
+    margin: 0px 0px 1.5rem;
+    overflow: hidden;
+}

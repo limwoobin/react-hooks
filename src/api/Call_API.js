@@ -27,7 +27,7 @@ const url = {
     GET_Comments        : '/dr/comment/list/',
     FindforPassword     : '/dr/mail/password/find/',
     GET_RecentNotice    : '/dr/board/recent/notice',
-    GET_RecentPost      : '/dr/post/recent/list',
+    GET_RecentPosts     : '/dr/post/recent/posts',
     Get_Posts           : '/dr/post/list/',
 }
 
@@ -53,6 +53,6 @@ export const API = {
     GET_Comments        : (data) => axios.get(url.GET_Comments + data , config),
     FindforPassword     : (data) => axios.get(url.FindforPassword + data , config),
     Get_RecentNotice    : () => axios.get(url.GET_RecentNotice , config),
-    Get_RecentPost      : () => axios.get(url.GET_RecentPost , config),
+    Get_RecentPosts     : () => axios.get(url.GET_RecentPosts , config),
     Get_Posts           : (data) => axios.get(url.Get_Posts + data , config),
 }

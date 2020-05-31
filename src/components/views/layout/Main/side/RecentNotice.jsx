@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom';
 const RenderNoticeTitle = (notices) => {
     return <div>
             {notices.map((c) => {
-                return <Link to={`/ctg/notice/id/${c._id}`} style={{ textDecoration: 'none' }}>
-                            <li>{c.title}</li>
+                return  <Link to={`/ctg/notice/id/${c._id}`} style={{ textDecoration: 'none' }}>
+                            <h3><li><p>{c.title}</p></li></h3>
                         </Link>
             })} 
            </div>
@@ -19,7 +19,7 @@ const NoticePost = () => {
     useEffect(() => {
          API.Get_RecentNotice()
          .then(res => {
-             console.log(res);
+            console.log(res);
             setNoticeTitle(res.data.data);
          }).catch(err => {
             console.log(err);
