@@ -3,7 +3,6 @@ import './MainPage.scss';
 import MainSide from './MainSide';
 import MyProfile from '../../MyProfile/MyProfile';
 
-
 const MainPage = () => {
     return (
         <div className="sc-fjdhpX iqwyib">

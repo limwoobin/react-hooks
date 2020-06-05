@@ -26,9 +26,12 @@ const Posts = (props) => {
             console.log(err);
         })
     } , []);
+
+
     return (
         <div>
-            {renderPost(posts)}
+            {/* {renderPost(posts)} */}
+            <Post />
         </div>
     )
 }
