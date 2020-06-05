@@ -1,6 +1,8 @@
 import React , { useState , useEffect } from 'react';
 import {API} from '../../../api/Call_API';
 import Post from './Post';
+import PostTitle from './PostTitle';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import {Func} from '../../../common/common';
 import './scss/Posts.scss';
 
@@ -30,8 +32,10 @@ const Posts = (props) => {
 
     return (
         <div>
+            <CssBaseline />
+            <PostTitle />
+            {/* <Post /> */}
             {/* {renderPost(posts)} */}
-            <Post />
         </div>
     )
 }
