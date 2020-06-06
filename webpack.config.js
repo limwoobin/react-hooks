@@ -65,8 +65,8 @@ module.exports = {
         port: port,
         open: true,
         historyApiFallback: true,
-        proxy : {
-            "**" : "http://localhost:4000"
-        }
+        // proxy : {
+        //     "**" : "http://localhost:4000"
+        // }
     }   
 };

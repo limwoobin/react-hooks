@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import SelectCategory from '../../common/SelectCategory';
 import './BoardWrite.scss';
 
 
@@ -53,7 +54,7 @@ const BoardWrite = () => {
                     <div className="content-editor keditor">
                       <div className="btn-category" role="button">
                         <div className="mce-widget mce-btn" role="button">
-                          ...
+                          {/* <SelectCategory className="mce-widget mce-btn" role="button" /> */}
                         </div>
                       </div>
                       <div className="post-title">
