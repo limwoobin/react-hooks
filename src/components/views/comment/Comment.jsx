@@ -2,6 +2,7 @@ import React from 'react';
 import Divider from '@material-ui/core/Divider';
 import ChildComment from './ChildComment';
 import { Func } from '../../../common/common';
+import UserAvatar from '../Members/UserAvatar';
 
 const Comment = (props) => {
     const {image , userEmail , content , modiDate , childComments} = props;
@@ -23,7 +24,7 @@ const Comment = (props) => {
         <div className="sc-kTUwUJ iqjCNk comment">
             <div className="sc-dqBHgY gYeJel">
                 <div className="profile">
-                    {/* <a><img src="" alt="comment-user-thumbnail" /></a> */}
+                    <a><UserAvatar imgPath={image} /></a>
                     <div className="comment-info">
                         <div className="userEmail">
                             <a>{userEmail}</a>
