@@ -15,14 +15,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const PostTitle = () => {
+const PostTitle = (props) => {
+    console.log(props);
+    const postType = props.type;
     const classes = useStyles();
 
     return (
         <div className={classes.heroContent}>
         <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Album layout
+            {postType}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
             Something short and leading about the collection below—its contents, the creator, etc.

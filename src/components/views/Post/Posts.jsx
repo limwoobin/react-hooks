@@ -31,11 +31,11 @@ const renderPost = (posts) => {
 const Posts = (props) => {
     const classes = useStyles();
 
-    const postKeyword = props.match.params.postKeyword;
+    const postType = props.match.params.postType;
     const [posts , setPosts] = useState([]);
 
     useEffect(() => {
-        API.Get_Posts(postKeyword)
+        API.Get_Posts(postType)
         .then(res => {
             console.log(res);
             if(res.data.code === 'DR00') setPosts(res.data.data);
@@ -49,7 +49,7 @@ const Posts = (props) => {
             <React.Fragment>
                 <CssBaseline />
                 <main>
-                    <PostTitle />
+                    <PostTitle type={postType} />
                     <Container className={classes.cardGrid} maxWidth="md">
                     <Grid container spacing={4}>
                         {renderPost(posts)}
