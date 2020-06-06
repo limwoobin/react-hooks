@@ -52,7 +52,7 @@ const Posts = (props) => {
                     <PostTitle />
                     <Container className={classes.cardGrid} maxWidth="md">
                     <Grid container spacing={4}>
-                        {renderPost([1,2,3,4,5])}
+                        {renderPost(posts)}
                     </Grid>
                     </Container>
                 </main>
