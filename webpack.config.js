@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const port = process.env.PORT || 3000;
 const path = require('path');
 
@@ -49,7 +50,7 @@ module.exports = {
                         options: {minimize: true}
                     }
                 ]
-            }
+            },
         ]
     },
     devtool: 'inline-source-map',
@@ -58,7 +59,11 @@ module.exports = {
             template: './public/index.html',
             favicon: './public/favicon.png',
             filename: 'index.html'
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
     ],
     devServer: {
         host: 'localhost',

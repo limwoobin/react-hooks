@@ -7,8 +7,8 @@ import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import SelectCategory from '../../common/SelectCategory';
+// import SummernoteEditor from '../../common/SummernoteEditor';
 import './BoardWrite.scss';
-
 
 const styles = theme => ({
     root: {
@@ -43,6 +43,10 @@ const BoardWrite = () => {
     const handleBoardWrite = () => {
 
     }
+
+    const onChange = (content) => {
+        console.log('onChange', content);
+    }
     
     return (
         <div classes={styles.root}>
@@ -59,6 +63,9 @@ const BoardWrite = () => {
                       </div>
                       <div className="post-title">
                         <textarea className="textarea_tit" placeholder="제목을 입력하세요" style={{height: '42px'}} />
+                      </div>
+                      <div>
+                        asdasdasd
                       </div>
                     </div>
                 </div>
