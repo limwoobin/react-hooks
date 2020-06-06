@@ -42,7 +42,7 @@
     "@types/react-dom": "^16.9.6",
     "antd": "^4.1.0",
     "axios": "^0.19.2",
-    "bootstrap": "3.3.6",
+    "bootstrap": "3.4.1",
     "eslint": "^7.0.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
