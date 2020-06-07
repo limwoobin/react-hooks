@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import SelectCategory from '../../common/SelectCategory';
-import MDT from '../Board/Editor/index';
+import MyEditor from './Editor/index';
 import './BoardWrite.scss';
 
 const styles = theme => ({
@@ -65,7 +65,7 @@ const BoardWrite = () => {
                         <textarea className="textarea_tit" placeholder="제목을 입력하세요" style={{height: '42px'}} />
                       </div>
                       <div>
-                        <MDT />
+                        <MyEditor />
                       </div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ module.exports = {
                 use: [
                         'style-loader',
                         'css-loader',
-                        'sass-loader'
+                        'sass-loader',
                 ],
             },
             {
@@ -51,6 +51,10 @@ module.exports = {
                     }
                 ]
             },
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: 'file-loader',
+            }
         ]
     },
     devtool: 'inline-source-map',
@@ -59,10 +63,6 @@ module.exports = {
             template: './public/index.html',
             favicon: './public/favicon.png',
             filename: 'index.html'
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
         }),
     ],
     devServer: {
