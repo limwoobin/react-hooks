@@ -1,0 +1,8 @@
+/* editor.css  */
+/* 에디터의 높이, 보더, 패딩 등 설정 */
+.demo-editor {
+    height: 350px !important;
+    border: 1px solid #F1F1F1 !important;
+    padding: 5px !important;
+    border-radius: 2px !important;
+  }

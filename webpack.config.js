@@ -30,12 +30,12 @@ module.exports = {
             },
             {
                 test: /\.(css|scss)$/,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 use: [
                         'style-loader',
                         'css-loader',
                         'sass-loader'
-                ]
+                ],
             },
             {
                 test: /\.(png|jpg)$/,
@@ -62,7 +62,7 @@ module.exports = {
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
         }),
     ],
     devServer: {
